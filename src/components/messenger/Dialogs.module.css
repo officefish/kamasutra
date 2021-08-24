@@ -1,0 +1,13 @@
+
+.DialogGrid {
+    display:grid;
+    grid-template-columns: 3fr 7fr;
+}
+
+.DialogList {
+    padding: 10px;
+}
+
+.MessageList {
+    padding: 10px;
+}
