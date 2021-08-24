@@ -23,18 +23,26 @@ let initialState =
 } 
 
 const messengerReducer = (state = initialState, action) => {
-    switch(action.type) {
-        case SEND_NEW_MESSAGE: {
+
+    /** Make incomplete copy of state */
+    let stateCopy = {...state}
+
+    switch(action.type)
+    {
+        case SEND_NEW_MESSAGE:
+        {
             const id = state.messages.length
             const text = state.newMessagePreview
             const message = {id:id, text:text}
-            state.messages.unshift(message);
-            state.newMessagePreview = DEFAULT_NEW_MESSAGE_PREVIEW
-            return state
+            /** Copy messages and unshift new message */
+            stateCopy.messages = [message, ...state.messages];
+            stateCopy.newMessagePreview = DEFAULT_NEW_MESSAGE_PREVIEW
+            return stateCopy
         }
-        case UPDATE_NEW_MESSAGE_PREVIEW: {
-            state.newMessagePreview = action.text
-            return state
+        case UPDATE_NEW_MESSAGE_PREVIEW:
+        {
+            stateCopy.newMessagePreview = action.text
+            return stateCopy
         }
         default: return state
     }
