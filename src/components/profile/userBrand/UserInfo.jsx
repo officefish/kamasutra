@@ -1,5 +1,5 @@
 
-import style from "./Profile.module.css"
+import style from "../Profile.module.css"
 
 const UserInfo = () => {
     return (

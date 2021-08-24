@@ -1,23 +1,18 @@
-import style from "./Dialogs.module.css" 
+import style from "./Messenger.module.css"
 
-import MessageList from "./MessageList";
-import DialogList from "./DialogList";
 import NewMessageContainerIO from "./newMessage/NewMessageContainerIO";
+import MessageListContainerIO from "./messageList/MessageListContainerIO";
+import DialogListContainerIO from "./dialogList/DialogListContainerIO";
 
-const Messenger = (props) => {
-
-    /** Messenger state data */
-    const messenger = props.store.getState().messenger
-
-    return (
-        <div className={style.DialogGrid}>
-            <DialogList data={messenger.dialogs} />
-            <div>
-                <NewMessageContainerIO store={props.store}/>
-                <MessageList data={messenger.messages}/>
+const Messenger = () =>
+{
+    return  <div className={style.DialogGrid}>
+                <DialogListContainerIO/>
+                <div>
+                    <NewMessageContainerIO />
+                    <MessageListContainerIO/>
+                </div>
             </div>
-        </div>
-    );
-}
 
+}
 export default Messenger;

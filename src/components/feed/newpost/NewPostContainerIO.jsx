@@ -2,35 +2,33 @@ import NewPost from "./NewPost"
 
 import { PublishNewPostAction } from "../../../redux/profileReducer";
 import { UpdateNewPostPreviewAction } from "../../../redux/profileReducer";
-import StoreContext from "../../../storeContext";
+import {connect} from "react-redux";
 
-const NewPostContainerIO = () => {
-    /** Redux dispatcher */
-    //const dispatch = store.dispatch
-
-    /* Preview text area value */
-    const preview = {} // store.getState().profile.newPostPreview
-
-    /** IO Controllers */
-    const publishController = () => {
-        const action = PublishNewPostAction()
-        //dispatch(action)
+let mapStateToProps = (state) =>
+{
+    return {
+        /** Preview text area value */
+        preview:state.profile.newPostPreview
     }
-            
-    const updatePreviewController = text => {
-        const action = UpdateNewPostPreviewAction(text)
-        //dispatch(action)
-    }
-        
-    return <StoreContext.Consumer> 
-        {   (store) => {
-                return <NewPost 
-                    preview={store.getState().profile.newPostPreview} 
-                    publish={publishController} 
-                    updatePreview={updatePreviewController}/>    
-                }
-        }
-        </StoreContext.Consumer>    
-
 }
+
+let mapDispatchToProps = (dispatch) =>
+{
+    return {
+        /** Publish new post Controller */
+        publish: () =>
+        {
+            const action = PublishNewPostAction()
+            dispatch(action)
+        },
+        /** Publish preview Controller */
+        updatePreview: (text) =>
+        {
+            const action = UpdateNewPostPreviewAction(text)
+            dispatch(action)
+        }
+    }
+}
+
+const NewPostContainerIO = connect(mapStateToProps, mapDispatchToProps)(NewPost)
 export default NewPostContainerIO;

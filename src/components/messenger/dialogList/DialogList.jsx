@@ -1,5 +1,5 @@
 import Dialog from "./Dialog"
-import style from "./Dialogs.module.css" 
+import style from "../Messenger.module.css"
 
 const DialogList = (props) => {
 

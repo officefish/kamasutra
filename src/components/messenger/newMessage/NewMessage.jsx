@@ -1,4 +1,4 @@
-import style from "./../Dialogs.module.css"
+import style from "../Messenger.module.css"
 
 const NewMessage = (props) => {
     
@@ -12,7 +12,7 @@ const NewMessage = (props) => {
     /** Send message button Listener */
     const onSendMessage = () => { sendMessageController() }
 
-    /** Ubpdate preview textarea Listener */
+    /** Update preview textarea Listener */
     const onNewMessagePreviewUpdate = (e) => { updatePreviewController(e.target.value) }
 
     return (

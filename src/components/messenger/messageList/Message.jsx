@@ -1,4 +1,4 @@
-import style from "./Dialogs.module.css" 
+import style from "../Messenger.module.css"
 
 const Message = (props) => {
     let id = props.id;

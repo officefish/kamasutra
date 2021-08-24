@@ -13,7 +13,7 @@ export let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
           <BrowserRouter>
-            <Provider value={store}>
+            <Provider store={store}>
               <App />
             </Provider>
           </BrowserRouter>
@@ -24,7 +24,7 @@ export let rerenderEntireTree = () => {
 
 
 /** Add OnStateChange listener, which calls render function every time state changes */
-store.subscribe(rerenderEntireTree)
+//store.subscribe(rerenderEntireTree)
 
 /** Render DOM first time */
 rerenderEntireTree()
