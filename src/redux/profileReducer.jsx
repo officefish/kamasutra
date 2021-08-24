@@ -15,25 +15,28 @@ let initialState =
 
 const profileReducer = (state = initialState, action) => {
 
-    /** Make incomplete copy of state */
-    let stateCopy = {...state}
-
     switch(action.type) {
         case PUBLISH_NEW_POST:
         {
             const id = state.posts.length
             const data = state.newPostPreview
             const post = {id: id, data: data, numLikes: 0}
-            /** Copy posts and unshift new post */
-            stateCopy.posts = [post, ...state.posts];
-            stateCopy.newPostPreview = DEFAULT_NEW_POST_PREVIEW
-            return stateCopy
-
+            /** return copy of state using spread operator*/
+            return {
+                ...state,
+                /** Copy posts and unshift new post */
+                posts:[post, ...state.posts],
+                newPostPreview:DEFAULT_NEW_POST_PREVIEW
+            }
         }
         case UPDATE_NEW_POST_PREVIEW:
         {
-            stateCopy.newPostPreview = action.text
-            return stateCopy
+            /** return copy of state using spread operator*/
+            return {
+                ...state,
+                newPostPreview: action.text
+            }
+
         }
         default: return state
     }
