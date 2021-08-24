@@ -7,6 +7,7 @@ import Messenger from "./components/messenger/Messenger"
 import Profile from './components/profile/Profile';
 
 import { Route, Switch } from 'react-router-dom';
+import Community from './components/community/Community';
 
 const App = () =>
 {
@@ -20,6 +21,9 @@ const App = () =>
                         </Route>
                         <Route path = "/messenger">
                             <Messenger />
+                        </Route>
+                        <Route path = "/users">
+                            <Community />
                         </Route>
                     </Switch>
                 </div>

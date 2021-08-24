@@ -8,7 +8,7 @@ const Navigation = () => {
                 <ul>
                 <li><NavLink to="/profile">Feed</NavLink></li>
                 <li><NavLink to="/messenger">Messages</NavLink></li>
-                <li><a href="#">Music</a></li>
+                <li><NavLink to="/users">Users</NavLink></li>
                 <li><a href="#">Settings</a></li>
                 </ul>
             </nav>
