@@ -7,15 +7,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
  
 import { BrowserRouter } from 'react-router-dom';
-import StoreContext from './storeContext';
+import { Provider } from 'react-redux';
 
 export let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
           <BrowserRouter>
-            <StoreContext.Provider value={store}>
+            <Provider value={store}>
               <App />
-            </StoreContext.Provider>
+            </Provider>
           </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
