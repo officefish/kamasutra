@@ -1,8 +1,11 @@
+import CommunityListContainerIO from "./communityList/CommunityListContainerIO"
+import UpdateCommunity from "./updateCommunity/UpdateCommunity"
 
 let Community = () =>
 {
     return <div>
-                <h3>Users</h3>
+                <CommunityListContainerIO />
+                <UpdateCommunity />
             </div>
 }
 export default Community;
