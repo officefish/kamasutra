@@ -7,13 +7,15 @@ const imgSource = 'https://rick-i-morty.online/wp-content/uploads/2007/10/Rick_a
 
 let initialState = 
 {
-  users:
+  users:[]
+  /*
   [
     { id:1, imgSrc:imgSource, followed:true, fullname:"Nikita", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},
     { id:2, imgSrc:imgSource, followed:true, fullname:"Roman", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},         
     { id:3, imgSrc:imgSource, followed:true, fullname:"Dmitriy", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},         
     { id:4, imgSrc:imgSource, followed:true, fullname:"Sergey", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}}         
   ]
+  */
 } 
 
 const communityReducer = (state = initialState, action) => {
@@ -60,7 +62,7 @@ const communityReducer = (state = initialState, action) => {
 
 export const StartFollowingAction = userId => { return { type:FOLLOW, userId:userId } }
 export const StopFollowingAction = userId => { return { type:UNFOLLOW, userId:userId } }
-export const UpdateCommunity = () => { return { type:UPDATE_COMMUNITY } }
+export const UpdateCommunityAction = (users) => { return { type:UPDATE_COMMUNITY, users:users } }
 
 export default communityReducer
 

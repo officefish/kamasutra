@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { StartFollowingAction, StopFollowingAction } from "../../../redux/communityReducer";
+import { StartFollowingAction, StopFollowingAction, UpdateCommunityAction } from "../../../redux/communityReducer";
 import CommulityList from "./CommunityList";
 
 let mapStateToProps = (state) =>
@@ -23,6 +23,11 @@ let mapDispatchToProps = (dispatch) =>
         unfollow: (id) =>
         {
             const action = StopFollowingAction(id)
+            dispatch(action)
+        },
+        update: (members) =>
+        {
+            const action = UpdateCommunityAction(members)
             dispatch(action)
         }
     }

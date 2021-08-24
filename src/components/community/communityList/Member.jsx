@@ -1,11 +1,11 @@
 let Member = (props) => {
     
     /** Member fields */
-    const name = props.data.fullname
+    const name = props.data.name
     const status = props.data.status
-    const country = props.data.location.country
-    const city = props.data.location.city
-    const imgSrc = props.data.imgSrc
+    //const country = props.data.location.country
+    //const city = props.data.location.city
+    const imgSrc = props.data.photos.small
     const followed = props.data.followed
     const id = props.data.id
 
@@ -30,10 +30,11 @@ let Member = (props) => {
             <div>{name}</div>
             <div>{status}</div>
         </span>
-        <span>
-            <div>{country}</div>
-            <div>{city}</div>
-        </span>
+        {//<span>
+           // <div>{country}</div>
+            //<div>{city}</div>
+        //</span>
+}
     </div>
 }
 export default Member
