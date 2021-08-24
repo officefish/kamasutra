@@ -22,7 +22,7 @@ const App = () =>
                         <Route path = "/messenger">
                             <Messenger />
                         </Route>
-                        <Route path = "/users">
+                        <Route path = "/community">
                             <Community />
                         </Route>
                     </Switch>
