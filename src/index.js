@@ -6,11 +6,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
  
+import { BrowserRouter } from 'react-router-dom';
+import StoreContext from './storeContext';
 
 export let rerenderEntireTree = () => {
     ReactDOM.render(
         <React.StrictMode>
-          <App store={store}/>
+          <BrowserRouter>
+            <StoreContext.Provider value={store}>
+              <App />
+            </StoreContext.Provider>
+          </BrowserRouter>
         </React.StrictMode>,
         document.getElementById('root')
       );

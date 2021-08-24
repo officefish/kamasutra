@@ -1,3 +1,4 @@
+import StoreContext from "../../storeContext";
 import NewPostContainerIO from "./newpost/NewPostContainerIO";
 import PostList from "./PostList"
 
@@ -9,8 +10,18 @@ const Feed = (props) => {
     return (
         <div>
             <h3>MyPosts</h3>
-            <NewPostContainerIO store={props.store}/>
-            <PostList data={posts}/>
+            <NewPostContainerIO />
+            
+        {/*
+        
+        <StoreContext.Consumer> 
+            {
+                store => {
+                    <PostList store={store} />
+                }
+            }
+            </StoreContext.Consumer>
+        */}
         </div>      
     );
 }

@@ -6,27 +6,19 @@ import Navigation from "./components/navigation/Navigation"
 import Messenger from "./components/messenger/Messenger"
 import Profile from './components/profile/Profile';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
-const App = (props) => {
-  
-  let profile = () => <Profile 
-    store = {props.store}/>
-  let messenger = () => <Messenger 
-    store = {props.store}/>
- 
+const App = () => {
   return (
-    <BrowserRouter>
-      <div className={style.App}>
-        <Header />
-        <Navigation />
-        <div className={style.Content}>
-          <Route path="/profile" render={profile} />
-          <Route path="/messenger" render={messenger} />
-        </div>  
-      </div>
-    </BrowserRouter>
-  );
+    <div className={style.App}>
+      <Header />
+      <Navigation />
+      <div className={style.Content}>
+        <Route path="/profile" render={<Profile />} />
+        {/*<Route path="/messenger" render={messenger} />*/}
+      </div>  
+    </div>
+    );
 }
 
 /*
