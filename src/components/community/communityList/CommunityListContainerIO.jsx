@@ -1,12 +1,28 @@
 import { connect } from "react-redux";
-import { StartFollowingAction, StopFollowingAction, UpdateCommunityAction } from "../../../redux/communityReducer";
+import {
+    SelectCommunityPageAC,
+    StartFollowingAction,
+    StopFollowingAction
+} from "../../../redux/communityReducer";
 import CommulityList from "./CommunityList";
 
 let mapStateToProps = (state) =>
 {
     return {
-        /** List of community members */
-        data:state.community.users
+
+       /** List of community members in page */
+       users: state.community.users,
+
+       pagination: {
+            /** Number of users showed in single page */
+            usersPerPage: state.community.usersPerPage,
+
+            /** Total number of community members */
+            totalUsers: state.community.totalUsers,
+
+            /** Current page value */
+            currentPage: state.community.currentPage
+        }
     }
 }
 
@@ -25,9 +41,10 @@ let mapDispatchToProps = (dispatch) =>
             const action = StopFollowingAction(id)
             dispatch(action)
         },
-        update: (members) =>
+        /** Show community members depends on current page */
+        selectPage: (members, pageNumber, totalUsers) =>
         {
-            const action = UpdateCommunityAction(members)
+            const action = SelectCommunityPageAC(members, pageNumber, totalUsers)
             dispatch(action)
         }
     }

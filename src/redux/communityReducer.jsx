@@ -1,22 +1,17 @@
 
 const FOLLOW = "FOLLOW"
 const UNFOLLOW = "UNFOLLOW"
-const UPDATE_COMMUNITY = "UPDATE_COMMUNITY"
+const SELECT_PAGE = "SELECT_PAGE"
 
 const imgSource = 'https://rick-i-morty.online/wp-content/uploads/2007/10/Rick_and_Morty_season_4.png'
 
 let initialState = 
 {
-  users:[]
-  /*
-  [
-    { id:1, imgSrc:imgSource, followed:true, fullname:"Nikita", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},
-    { id:2, imgSrc:imgSource, followed:true, fullname:"Roman", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},         
-    { id:3, imgSrc:imgSource, followed:true, fullname:"Dmitriy", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}},         
-    { id:4, imgSrc:imgSource, followed:true, fullname:"Sergey", status:"I am a boss", location:{country:"Russia", city:"SPB",timeZone:"UTC+4"}}         
-  ]
-  */
-} 
+  users:[],
+  currentPage:1,
+  usersPerPage:5,
+  totalUsers:12
+}
 
 const communityReducer = (state = initialState, action) => {
 
@@ -51,18 +46,31 @@ const communityReducer = (state = initialState, action) => {
                 ),
             }
         }
-        /** Update community feed */
-        case UPDATE_COMMUNITY:
+        /** Set current page */
+        case SELECT_PAGE:
         {
-            return {...state, users: [...state.users, ...action.users] }
+            return {...state,
+                users:[ ...action.users],
+                currentPage: action.currentPage,
+                totalUsers: action.totalUsers
+            }
         }
+
         default: return state
     }    
 }
 
-export const StartFollowingAction = userId => { return { type:FOLLOW, userId:userId } }
-export const StopFollowingAction = userId => { return { type:UNFOLLOW, userId:userId } }
-export const UpdateCommunityAction = (users) => { return { type:UPDATE_COMMUNITY, users:users } }
+export const StartFollowingAction = userId => { return { type:FOLLOW, userId } }
+export const StopFollowingAction = userId => { return { type:UNFOLLOW, userId } }
+export const SelectCommunityPageAC = (users, pageNumber, totalUsers) =>
+{
+    return {
+        type:SELECT_PAGE,
+        users,
+        totalUsers,
+        currentPage: pageNumber,
+    }
+}
 
 export default communityReducer
 
