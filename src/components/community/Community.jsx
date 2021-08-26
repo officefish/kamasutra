@@ -1,6 +1,6 @@
 import CommunityListContainerIO from "./communityList/CommunityListContainerIO"
 import React from "react";
-import {setTitle} from "../../redux/@setTitle";
+import {setTitle} from "../../redux/titleReducer";
 /*
 import UpdateCommunity from "./updateCommunity/UpdateCommunity"
 */

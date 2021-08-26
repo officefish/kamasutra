@@ -4,7 +4,7 @@ import NewMessageContainerIO from "./newMessage/NewMessageContainerIO";
 import MessageListContainerIO from "./messageList/MessageListContainerIO";
 import DialogListContainerIO from "./dialogList/DialogListContainerIO";
 import React from "react";
-import {setTitle} from "../../redux/@setTitle";
+import {setTitle} from "../../redux/titleReducer";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading messenger...'

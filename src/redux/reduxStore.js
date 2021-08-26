@@ -4,7 +4,7 @@ import { createStore, combineReducers } from 'redux'
 import profileReducer from './profileReducer';
 import messengerReducer from './messengerReducer';
 import communityReducer from './communityReducer';
-import titleReducer from "./@setTitle";
+import titleReducer from "./titleReducer";
 
 let reducers = combineReducers ({
     profile:profileReducer,
@@ -14,4 +14,4 @@ let reducers = combineReducers ({
 })
 
 let store = createStore(reducers)
-export default store;
+export default store
