@@ -4,7 +4,7 @@ import {
     StartFollowingAction,
     StopFollowingAction
 } from "../../../redux/communityReducer";
-import CommulityList from "./CommunityList";
+import CommunityList from "./CommunityList";
 
 let mapStateToProps = (state) =>
 {
@@ -50,5 +50,5 @@ let mapDispatchToProps = (dispatch) =>
     }
 }
 
-const CommunityListContainerIO = connect(mapStateToProps, mapDispatchToProps)(CommulityList)
+const CommunityListContainerIO = connect(mapStateToProps, mapDispatchToProps)(CommunityList)
 export default CommunityListContainerIO

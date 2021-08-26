@@ -11,16 +11,13 @@ import Community from './components/community/Community';
 
 const App = () =>
 {
-    const user = {}
-    user.name = "Sergey Inozemcev"
-
     return <div className = { style.App }>
                 <Header />
                 <Navigation />
                 <div className = { style.Content }>
                     <Switch>
                         <Route path = "/profile">
-                            <Profile  user={user}/>
+                            <Profile />
                         </Route>
                         <Route path = "/messenger">
                             <Messenger />

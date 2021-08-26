@@ -4,15 +4,37 @@
   put directly above a component class as seen in the example above
 */
 import React from "react";
+import {connect} from "react-redux";
 
+/** SetTitle redux wrapper */
+let mapStateToProps = (state) =>
+{
+    return {
 
-export const setTitle = getTitle => (WrappedComponent) => {
+        /** Page title */
+        title: state.document.title
+    }
+}
 
-    return class extends React.Component {
+let mapDispatchToProps = (dispatch) =>
+{
+    return {
+        /** Follow member with given id */
+        setTitle: (title) => { dispatch( SetTitleAC(title) ) }
+    }
+}
+
+/** SetTitle decorator */
+export const setTitle = (getTitle) => (WrappedComponent) => {
+
+    class SetTitleDecorator extends React.Component {
+
+        constructor(props) {
+            super(props);
+            document.title = props.title
+        }
 
         updateTitle = (props) => {
-            // Check if the callback has returned something,
-            // and if so - update the title
             const title = getTitle(props)
             if(title) {
                 document.title = title
@@ -30,5 +52,34 @@ export const setTitle = getTitle => (WrappedComponent) => {
             return <WrappedComponent {...this.props} />
         }
     }
+
+    const SetTitleDecoratorConnector = connect(mapStateToProps, mapDispatchToProps)(SetTitleDecorator)
+    return SetTitleDecoratorConnector
+
 }
+
+
+/** SetTitle reducer */
+const SET_TITLE = 'SET_TITLE'
+
+let initialState =
+    {
+        /** Document title */
+        title:'kamasutra'
+    }
+
+const titleReducer = (state = initialState, action) => {
+
+    switch (action.type) {
+        /** Change document title */
+        case SET_TITLE: {
+            return { ...state, title:state.title }
+        }
+
+        default: return state
+    }
+}
+export default titleReducer
+
+export const SetTitleAC = title => { return { type:SET_TITLE, title } }
 

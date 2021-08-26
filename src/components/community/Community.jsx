@@ -1,13 +1,23 @@
 import CommunityListContainerIO from "./communityList/CommunityListContainerIO"
+import React from "react";
+import {setTitle} from "../../decorators/@setTitle";
 /*
 import UpdateCommunity from "./updateCommunity/UpdateCommunity"
 */
 
-let Community = () =>
+@setTitle((props)=> {
+    ///debugger
+    return 'Kamasutra community'
+})
+class Community extends React.Component
 {
-    return <div>
-                <CommunityListContainerIO />
-        {/* UpdateCommunity /> */}
-            </div>
+    render () {
+        //debugger
+        return <div>
+            <CommunityListContainerIO />
+            {/* UpdateCommunity /> */}
+        </div>
+    }
 }
+
 export default Community;
