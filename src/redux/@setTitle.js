@@ -10,16 +10,17 @@ import {connect} from "react-redux";
 let mapStateToProps = (state) =>
 {
     return {
-
         /** Page title */
-        title: state.document.title
+        title: state.document.title,
+        /** Authorized user */
+        user: state.profile.user
     }
 }
 
 let mapDispatchToProps = (dispatch) =>
 {
     return {
-        /** Follow member with given id */
+        /** Set document title */
         setTitle: (title) => { dispatch( SetTitleAC(title) ) }
     }
 }

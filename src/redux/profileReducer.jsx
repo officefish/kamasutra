@@ -10,6 +10,9 @@ let initialState =
     {id : 1, data:"Post 0", numLikes:3},
     {id : 0, data:"Initial Post", numLikes:9}
   ],
+  user:{
+      name:'Sergey Inozemcev'
+  },
   newPostPreview: DEFAULT_NEW_POST_PREVIEW
 } 
 
