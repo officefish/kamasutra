@@ -3,7 +3,9 @@ import Member from "./Member";
 import React from "react";
 import MinimalistPagination, {getTotalPages} from "../../ui/pagination/MinimalistPagination";
 import CommunityRemoteService from "../../../service/CommunityRemoteService";
+import {connectCommunity} from "../../../decorators/@connectCommunity";
 
+@connectCommunity()
 class CommunityList extends React.Component {
 
     constructor(props) {

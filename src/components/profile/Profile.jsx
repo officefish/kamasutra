@@ -3,7 +3,7 @@ import style from './Profile.module.css';
 import UserBrand from './userBrand/UserBrand';
 import Feed from '../feed/Feed';
 import React from "react";
-import {setTitle} from "../../redux/titleReducer";
+import {setTitle} from "../../decorators/@setTitle";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading profile...'

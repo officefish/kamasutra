@@ -3,17 +3,18 @@ import {
     SelectCommunityPageAC,
     StartFollowingAction,
     StopFollowingAction
-} from "../../../redux/communityReducer";
-import CommunityList from "./CommunityList";
+} from "../redux/communityReducer";
+import React from "react";
+import CommunityList from "../components/community/communityList/CommunityList";
 
 let mapStateToProps = (state) =>
 {
     return {
 
-       /** List of community members in page */
-       users: state.community.users,
+        /** List of community members in page */
+        users: state.community.users,
 
-       pagination: {
+        pagination: {
             /** Number of users showed in single page */
             usersPerPage: state.community.usersPerPage,
 
@@ -50,5 +51,16 @@ let mapDispatchToProps = (dispatch) =>
     }
 }
 
-const CommunityListContainerIO = connect(mapStateToProps, mapDispatchToProps)(CommunityList)
-export default CommunityListContainerIO
+/** Connect community with reducer */
+export const connectCommunity = (props) => (WrappedComponent) => {
+
+    class ConnectCommunityDecorator extends React.Component {
+
+        render() {
+            return <WrappedComponent {...this.props} />
+        }
+    }
+
+    const CommunityListDecoratorConnector = connect(mapStateToProps, mapDispatchToProps)(ConnectCommunityDecorator)
+    return CommunityListDecoratorConnector
+}

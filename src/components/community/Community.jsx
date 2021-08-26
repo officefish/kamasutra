@@ -1,20 +1,18 @@
-import CommunityListContainerIO from "./communityList/CommunityListContainerIO"
 import React from "react";
-import {setTitle} from "../../redux/titleReducer";
+import {setTitle} from "../../decorators/@setTitle";
+import CommunityList from "./communityList/CommunityList";
 /*
 import UpdateCommunity from "./updateCommunity/UpdateCommunity"
 */
 
 @setTitle((props)=> {
-    ///debugger
     return 'Kamasutra community'
 })
 class Community extends React.Component
 {
     render () {
-        //debugger
         return <div>
-            <CommunityListContainerIO />
+            <CommunityList />
             {/* UpdateCommunity /> */}
         </div>
     }
