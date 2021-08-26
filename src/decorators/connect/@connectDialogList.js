@@ -1,5 +1,4 @@
-import React from "react";
-import {connect} from "react-redux";
+import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>
 {
@@ -10,12 +9,5 @@ let mapStateToProps = (state) =>
 }
 
 /** Connect newDialog widget with reducer */
-const connectDialogList = (props) => (WrappedComponent) =>
-{
-    class Decorator extends React.Component {
-        render() { return <WrappedComponent {...this.props}/> }
-    }
-    const Connector = connect(mapStateToProps)(Decorator)
-    return Connector
-}
+const connectDialogList = ConnectDecoratorFactory.MakeDecorator(mapStateToProps)
 export default connectDialogList

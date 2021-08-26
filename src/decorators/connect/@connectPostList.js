@@ -1,5 +1,4 @@
-import React from "react";
-import {connect} from "react-redux";
+import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>
 {
@@ -10,12 +9,6 @@ let mapStateToProps = (state) =>
 }
 
 /** Connect PostList widget with reducer */
-const connectPostList = (props) => (WrappedComponent) =>
-{
-    class Decorator extends React.Component {
-        render() { return <WrappedComponent {...this.props}/> }
-    }
-    const Connector = connect(mapStateToProps)(Decorator)
-    return Connector
-}
+const connectPostList = ConnectDecoratorFactory.MakeDecorator(mapStateToProps)
 export default connectPostList
+

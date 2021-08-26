@@ -3,7 +3,7 @@ import style from "../Messenger.module.css"
 import React from "react";
 import connectDialogList from "../../../decorators/connect/@connectDialogList";
 
-@connectDialogList()
+@connectDialogList
 class DialogList extends React.Component {
 
     render () {

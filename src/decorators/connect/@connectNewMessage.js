@@ -1,6 +1,6 @@
 import {SendNewMessageAction, UpdateNewMessagePreviewAction} from "../../redux/messengerReducer";
-import { connect } from "react-redux";
 import React from "react";
+import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 
 let mapStateToProps = (state) =>
@@ -30,15 +30,5 @@ let mapDispatchToProps = (dispatch) =>
 }
 
 /** Connect newMessage widget with reducer */
-export const connectNewMessage = (props) => (WrappedComponent) =>
-{
-    class NewMessageDecorator extends React.Component {
-
-        render() {
-            return <WrappedComponent {...this.props}/>
-        }
-    }
-
-    const NewMessageDecoratorConnector = connect(mapStateToProps, mapDispatchToProps)(NewMessageDecorator)
-    return NewMessageDecoratorConnector
-}
+const connectNewMessage = ConnectDecoratorFactory.MakeDecorator(mapStateToProps, mapDispatchToProps)
+export default connectNewMessage

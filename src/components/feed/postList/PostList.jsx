@@ -2,7 +2,7 @@ import Post from "./Post"
 import React from "react";
 import connectPostList from "../../../decorators/connect/@connectPostList";
 
-@connectPostList()
+@connectPostList
 class PostList extends React.Component
 {
     render () {

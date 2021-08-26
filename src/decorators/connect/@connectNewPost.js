@@ -1,6 +1,5 @@
 import {PublishNewPostAction, UpdateNewPostPreviewAction} from "../../redux/profileReducer";
-import {connect} from "react-redux";
-import React from "react";
+import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>
 {
@@ -29,12 +28,5 @@ let mapDispatchToProps = (dispatch) =>
 }
 
 /** Connect NewPost widget with reducer */
-const connectNewPost = (props) => (WrappedComponent) =>
-{
-    class Decorator extends React.Component {
-        render() { return <WrappedComponent {...this.props}/> }
-    }
-    const Connector = connect(mapStateToProps, mapDispatchToProps)(Decorator)
-    return Connector
-}
+const connectNewPost = ConnectDecoratorFactory.MakeDecorator(mapStateToProps, mapDispatchToProps)
 export default connectNewPost

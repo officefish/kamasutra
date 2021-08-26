@@ -1,8 +1,8 @@
 import style from "../Messenger.module.css"
 import React from "react";
-import {connectNewMessage} from "../../../decorators/connect/@connectNewMessage";
+import connectNewMessage from "../../../decorators/connect/@connectNewMessage";
 
-@connectNewMessage()
+@connectNewMessage
 class NewMessage extends React.Component {
 
     constructor(props) {

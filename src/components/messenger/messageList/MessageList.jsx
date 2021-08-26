@@ -3,7 +3,7 @@ import Message from "./Message"
 import connectMessageList from "../../../decorators/connect/@connectMessageList";
 import React from "react";
 
-@connectMessageList()
+@connectMessageList
 class MessageList extends React.Component{
 
     render () {

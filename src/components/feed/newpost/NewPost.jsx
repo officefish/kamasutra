@@ -2,7 +2,7 @@ import style from "./../Post.module.css"
 import React from "react";
 import connectNewPost from "../../../decorators/connect/@connectNewPost";
 
-@connectNewPost()
+@connectNewPost
 class NewPost extends React.Component {
     
     constructor (props) {

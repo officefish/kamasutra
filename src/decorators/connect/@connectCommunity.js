@@ -5,6 +5,7 @@ import {
     StopFollowingAction
 } from "../../redux/communityReducer";
 import React from "react";
+import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>
 {
@@ -51,15 +52,5 @@ let mapDispatchToProps = (dispatch) =>
 }
 
 /** Connect community with reducer */
-export const connectCommunity = (props) => (WrappedComponent) => {
-
-    class ConnectCommunityDecorator extends React.Component {
-
-        render() {
-            return <WrappedComponent {...this.props} />
-        }
-    }
-
-    const CommunityListDecoratorConnector = connect(mapStateToProps, mapDispatchToProps)(ConnectCommunityDecorator)
-    return CommunityListDecoratorConnector
-}
+const connectCommunity = ConnectDecoratorFactory.MakeDecorator(mapStateToProps, mapDispatchToProps)
+export default connectCommunity
