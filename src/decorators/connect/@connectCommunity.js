@@ -3,9 +3,8 @@ import {
     SelectCommunityPageAC,
     StartFollowingAction,
     StopFollowingAction
-} from "../redux/communityReducer";
+} from "../../redux/communityReducer";
 import React from "react";
-import CommunityList from "../components/community/communityList/CommunityList";
 
 let mapStateToProps = (state) =>
 {

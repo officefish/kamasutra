@@ -3,7 +3,7 @@ import Member from "./Member";
 import React from "react";
 import MinimalistPagination, {getTotalPages} from "../../ui/pagination/MinimalistPagination";
 import CommunityRemoteService from "../../../service/CommunityRemoteService";
-import {connectCommunity} from "../../../decorators/@connectCommunity";
+import {connectCommunity} from "../../../decorators/connect/@connectCommunity";
 
 @connectCommunity()
 class CommunityList extends React.Component {

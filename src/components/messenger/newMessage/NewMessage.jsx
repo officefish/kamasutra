@@ -1,30 +1,36 @@
 import style from "../Messenger.module.css"
+import React from "react";
+import {connectNewMessage} from "../../../decorators/connect/@connectNewMessage";
 
-const NewMessage = (props) => {
-    
-    /** Text area value */
-    const preview = props.preview
+@connectNewMessage()
+class NewMessage extends React.Component {
 
-    /** IO Controllers */
-    const sendMessageController = props.sendMessage
-    const updatePreviewController = props.updatePreview
+    constructor(props) {
+        super(props);
+
+        /** IO Controllers */
+        this.sendMessageController = props.sendMessage
+        this.updatePreviewController = props.updatePreview
+        debugger
+    }
 
     /** Send message button Listener */
-    const onSendMessage = () => { sendMessageController() }
+    onSendMessage = () => { this.sendMessageController() }
 
     /** Update preview textarea Listener */
-    const onNewMessagePreviewUpdate = (e) => { updatePreviewController(e.target.value) }
+    onNewMessagePreviewUpdate = (e) => { this.updatePreviewController(e.target.value) }
 
-    return (
-        <div className={style.NewMessage}>
-            <div>
-                <textarea onChange={onNewMessagePreviewUpdate} value={preview}/>
+    render () {
+        return (
+            <div className={style.NewMessage}>
+                <div>
+                    <textarea onChange={this.onNewMessagePreviewUpdate} value={this.props.preview}/>
+                </div>
+                <div>
+                    <button onClick={this.onSendMessage}>New message</button>
+                </div>
             </div>
-            <div>
-                <button onClick={onSendMessage}>New message</button>
-            </div>
-        </div>
-    );
+        );
+    }
 }
-
 export default NewMessage;
