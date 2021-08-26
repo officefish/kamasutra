@@ -1,30 +1,35 @@
 import style from "./../Post.module.css"
+import React from "react";
+import connectNewPost from "../../../decorators/connect/@connectNewPost";
 
-const NewPost = (props) => {
+@connectNewPost()
+class NewPost extends React.Component {
     
-    /** Text area value */
-    const preview = props.preview
+    constructor (props) {
+        super (props)
 
-    /** IO Controllers */
-    const publishController = props.publish
-    const updatePreviewController = props.updatePreview
+        /** IO Controllers */
+        this.publishController = props.publish
+        this.updatePreviewController = props.updatePreview
+    }
 
     /** Publish Button Listener */
-    const onNewPost = () => { publishController() }
+    onNewPost = () => { this.publishController() }
 
-    /** Ubpdate preview textarea Listener */
-    const onNewPostPreviewUpdate = (e) => { updatePreviewController(e.target.value) }
+    /** Update preview textarea Listener */
+    onNewPostPreviewUpdate = (e) => { this.updatePreviewController(e.target.value) }
 
-    return (
-        <div className={style.NewPost}>
-            <div>
-                <textarea onChange={onNewPostPreviewUpdate} value={preview}/>
+    render () {
+        return (
+            <div className={style.NewPost}>
+                <div>
+                    <textarea onChange={this.onNewPostPreviewUpdate} value={this.props.preview}/>
+                </div>
+                <div>
+                    <button onClick={this.onNewPost}>Add new</button>
+                </div>
             </div>
-            <div>
-                <button onClick={onNewPost}>Add new</button>
-            </div>
-        </div>
-    );
+        );
+    }
 }
-
 export default NewPost;

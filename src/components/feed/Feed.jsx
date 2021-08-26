@@ -1,12 +1,12 @@
-import NewPostContainerIO from "./newpost/NewPostContainerIO";
-import PostListContainerIO from "./postList/PostListContainerIO";
+import NewPost from "./newpost/NewPost";
+import PostList from "./postList/PostList";
 
 const Feed = () =>
 {
     return <div>
                 <h3>MyPosts</h3>
-                <NewPostContainerIO />
-                <PostListContainerIO />
+                <NewPost />
+                <PostList />
            </div>
 }
 export default Feed;

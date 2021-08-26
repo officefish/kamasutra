@@ -1,10 +1,10 @@
 import style from "./Messenger.module.css"
 
-import MessageListContainerIO from "./messageList/MessageListContainerIO";
-import DialogListContainerIO from "./dialogList/DialogListContainerIO";
 import React from "react";
 import {setTitle} from "../../decorators/@setTitle";
 import NewMessage from "./newMessage/NewMessage";
+import MessageList from "./messageList/MessageList";
+import DialogList from "./dialogList/DialogList";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading messenger...'
@@ -14,10 +14,10 @@ class Messenger extends React.Component
 {
     render () {
         return <div className={style.DialogGrid}>
-            <DialogListContainerIO/>
+            <DialogList />
             <div>
                 <NewMessage />
-                <MessageListContainerIO/>
+                <MessageList />
             </div>
         </div>
     }

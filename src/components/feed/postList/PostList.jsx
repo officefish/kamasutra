@@ -1,9 +1,15 @@
 import Post from "./Post"
+import React from "react";
+import connectPostList from "../../../decorators/connect/@connectPostList";
 
-const PostList = (props) =>
+@connectPostList()
+class PostList extends React.Component
 {
-    let posts = props.data
-        .map( post => <Post data={post.data} id={post.id} numLikes={post.numLikes}/> )
-    return <div>{posts}</div>
+    render () {
+        let posts = this.props.data
+            .map( post => <Post data={post.data} id={post.id} key={post.id} numLikes={post.numLikes}/> )
+        return <div>{posts}</div>
+    }
+
 }
-export default PostList;
+export default PostList

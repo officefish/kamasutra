@@ -9,7 +9,7 @@ let mapStateToProps = (state) =>
     }
 }
 
-/** Connect newMessage widget with reducer */
+/** Connect newDialog widget with reducer */
 const connectDialogList = (props) => (WrappedComponent) =>
 {
     class Decorator extends React.Component {
