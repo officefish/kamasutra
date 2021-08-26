@@ -11,9 +11,6 @@ class CommunityList extends React.Component {
 
         /** Remote request service */
         this.remote = new CommunityRemoteService()
-
-        /** Reducer callbacks */
-
     }
 
     /** Override react component behavior */
@@ -70,7 +67,7 @@ class CommunityList extends React.Component {
             pageNumber // page number request param
         )
     }
-    
+
     /** Render jsx view */
     render ()
     {
