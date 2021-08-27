@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import {
     SelectCommunityPageAC,
     StartFollowingAction,
-    StopFollowingAction
+    StopFollowingAction, ToggleIsFetchingAC
 } from "../../redux/communityReducer";
 import React from "react";
 import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
@@ -22,7 +22,10 @@ let mapStateToProps = (state) =>
             totalUsers: state.community.totalUsers,
 
             /** Current page value */
-            currentPage: state.community.currentPage
+            currentPage: state.community.currentPage,
+
+            /** Data isFetching from remote server status */
+            isFetching: state.community.isFetching
         }
     }
 }
@@ -46,6 +49,11 @@ let mapDispatchToProps = (dispatch) =>
         selectPage: (members, pageNumber, totalUsers) =>
         {
             const action = SelectCommunityPageAC(members, pageNumber, totalUsers)
+            dispatch(action)
+        },
+        /** Set current isFetching data from remote server status */
+        toggleIsFetching: isFetching => {
+            const action = ToggleIsFetchingAC(isFetching)
             dispatch(action)
         }
     }

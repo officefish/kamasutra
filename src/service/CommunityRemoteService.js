@@ -14,7 +14,7 @@ class CommunityRemoteService {
 
             // `timeout` specifies the number of milliseconds before the request times out.
             // If the request takes longer than `timeout`, the request will be aborted.
-            timeout: 1000, // default is `0` (no timeout)
+            timeout: 2000, // default is `0` (no timeout)
 
             // `withCredentials` indicates whether or not cross-site Access-Control requests
             // should be made using credentials
@@ -47,11 +47,15 @@ class CommunityRemoteService {
         if (term.length) config.params.term = term
         if (friendMask) config.params.friend = friend
 
+        //let responseStatus = false
+
         this.remote
             .get('/users', config)
             .then(response => {
                 onSuccess(response.data.items, page, response.data.totalCount)
-            })
+            }).catch(error => {
+            console.log('Error', error);
+        });
     }
 
 }

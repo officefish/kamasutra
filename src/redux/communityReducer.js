@@ -2,6 +2,7 @@
 const FOLLOW = "FOLLOW"
 const UNFOLLOW = "UNFOLLOW"
 const SELECT_PAGE = "SELECT_PAGE"
+const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING"
 
 const imgSource = 'https://rick-i-morty.online/wp-content/uploads/2007/10/Rick_and_Morty_season_4.png'
 
@@ -9,8 +10,9 @@ let initialState =
 {
   users:[],
   currentPage:1,
-  usersPerPage:5,
-  totalUsers:12
+  usersPerPage:10,
+  totalUsers:120,
+  isFetching:false
 }
 
 const communityReducer = (state = initialState, action) => {
@@ -56,10 +58,19 @@ const communityReducer = (state = initialState, action) => {
             }
         }
 
+        case TOGGLE_IS_FETCHING:
+        {
+            return {...state,
+                users:[...state.users],
+                isFetching: action.isFetching
+            }
+        }
+
         default: return state
     }    
 }
 
+export const ToggleIsFetchingAC = isFetching => { return {type:TOGGLE_IS_FETCHING, isFetching } }
 export const StartFollowingAction = userId => { return { type:FOLLOW, userId } }
 export const StopFollowingAction = userId => { return { type:UNFOLLOW, userId } }
 export const SelectCommunityPageAC = (users, pageNumber, totalUsers) =>

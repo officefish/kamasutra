@@ -13,7 +13,7 @@ const uxReducer = (state = initialState, action) => {
     switch (action.type) {
         /** Change document title */
         case TOGGLE_GLOBAL_PRELOAD: {
-            return { ...state, title:state.isGlobalPreloader }
+            return { ...state, isGlobalPreloader:action.isGlobalPreloader }
         }
 
         default: return state

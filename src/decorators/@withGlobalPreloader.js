@@ -3,7 +3,7 @@ import {ToggleGlobalPreloaderAC} from "../redux/uxReducer";
 import React from "react";
 import ConnectDecoratorFactory from "./connect/ConnectDecoratorFactory";
 import {connect} from "react-redux";
-import GlobalPreloader from "../components/ui/GlobalPreloader";
+import StackPreloader from "../components/ui/StackPreloader";
 
 
 let mapStateToProps = (state) =>
@@ -23,12 +23,21 @@ let mapDispatchToProps = (dispatch) =>
 }
 
 /** Decorator function for wrapped components which needs preloading  */
-const withGlobalPreloader = (WrappedComponent) => {
+const withGlobalPreloader = (flag) => (WrappedComponent) => {
     class Decorator extends React.Component {
+
+        constructor (props) {
+            super(props)
+
+        }
+
         render()
-        { return <GlobalPreloader {...this.props}>
-                    <WrappedComponent {...this.props}/>
-                </GlobalPreloader>
+        {
+            if (this.props[flag] != this.props.isGlobalPreloader) {
+                this.props.togglePreloader(this.props[flag])
+            }
+
+            return <StackPreloader isGlobalPreloader={this.props.isGlobalPreloader} content={<WrappedComponent {...this.props}/>} />
         }
     }
     const Connector = connect(mapStateToProps, mapDispatchToProps)(Decorator)

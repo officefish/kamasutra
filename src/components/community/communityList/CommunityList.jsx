@@ -4,6 +4,7 @@ import React from "react";
 import MinimalistPagination, {getTotalPages} from "../../ui/pagination/MinimalistPagination";
 import CommunityRemoteService from "../../../service/CommunityRemoteService";
 import connectCommunity from "../../../decorators/connect/@connectCommunity";
+import CommunityListPage from "./CommunityListPage";
 
 @connectCommunity
 class CommunityList extends React.Component {
@@ -27,7 +28,9 @@ class CommunityList extends React.Component {
     InitialRequestController = () =>
     {
         /** If list of community members is empty in constructing stage, request them from remote server */
-        if (this.props.users.length === 0) this.__requestGetUsers(this.props.currentPage)
+        if (this.props.users.length === 0) {
+            this.__requestGetUsers(this.props.currentPage)
+        }
     }
 
     /** Pagination output controller */
@@ -38,6 +41,10 @@ class CommunityList extends React.Component {
 
     /** Remote service output controller */
     SelectPageResponseController = (members, pageNumber, totalUsers) => {
+
+        /** Report reducer about data not isFetching anymore */
+        this.props.toggleIsFetching(false)
+
         this.props.selectPage(members, pageNumber, totalUsers)
     }
 
@@ -63,9 +70,12 @@ class CommunityList extends React.Component {
     /** Pseudo inline protected functions */
     __requestGetUsers = (pageNumber) =>
     {
+        /** Report reducer about data isFetching now */
+        this.props.toggleIsFetching(true)
+
         this.remote.requestGetUsers(
             this.SelectPageResponseController, // onSuccess callback
-            this.props.usersPerPage, // page size request param
+            this.props.pagination.usersPerPage, // page size request param
             pageNumber // page number request param
         )
     }
@@ -73,6 +83,7 @@ class CommunityList extends React.Component {
     /** Render jsx view */
     render ()
     {
+
         const paginationData = this.getPaginationData()
         const members = this.props.users
             .map( user =>
@@ -84,7 +95,7 @@ class CommunityList extends React.Component {
                     key={user.id}
                  /> )
         return <div>
-            <div>{members}</div>
+            <CommunityListPage members={members} isFetching={this.props.pagination.isFetching}/>
             <MinimalistPagination data={paginationData} onSelect={this.SelectPageRequestController}/>
         </div>
     }
