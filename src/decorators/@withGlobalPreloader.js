@@ -1,7 +1,6 @@
 /** Show global preloader when user waiting some data or content generation passes */
 import {ToggleGlobalPreloaderAC} from "../redux/uxReducer";
 import React from "react";
-import ConnectDecoratorFactory from "./connect/ConnectDecoratorFactory";
 import {connect} from "react-redux";
 import StackPreloader from "../components/ui/StackPreloader";
 
@@ -24,24 +23,29 @@ let mapDispatchToProps = (dispatch) =>
 
 /** Decorator function for wrapped components which needs preloading  */
 const withGlobalPreloader = (flag) => (WrappedComponent) => {
+
     class Decorator extends React.Component {
-
-        constructor (props) {
-            super(props)
-
-        }
 
         render()
         {
-            if (this.props[flag] != this.props.isGlobalPreloader) {
+            /** Possible solution but it shoulb
+            useEffect(() => {
+                if (flag) {
+                    this.props.togglePreloader(this.props[flag])
+                }
+            }, [this.props, this.props.togglePreloader]);
+            */
+
+            /** this if calls bad state warning */
+            if (this.props[flag] !== this.props.isGlobalPreloader) {
                 this.props.togglePreloader(this.props[flag])
             }
+
 
             return <StackPreloader isGlobalPreloader={this.props.isGlobalPreloader} content={<WrappedComponent {...this.props}/>} />
         }
     }
-    const Connector = connect(mapStateToProps, mapDispatchToProps)(Decorator)
-    return Connector
+    return connect(mapStateToProps, mapDispatchToProps)(Decorator)
 }
 export default withGlobalPreloader
 

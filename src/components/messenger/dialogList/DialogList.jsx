@@ -8,7 +8,11 @@ class DialogList extends React.Component {
 
     render () {
         let dialogs = this.props.data
-            .map( dialog => <Dialog companion={dialog.companion} id={dialog.id}/> )
+            .map( dialog => <Dialog
+                companion={dialog.companion}
+                id={dialog.id}
+                key={dialog.id}
+            /> )
         return <div className={style.DialogList}>Dialogs:{dialogs}</div>
     }
 }

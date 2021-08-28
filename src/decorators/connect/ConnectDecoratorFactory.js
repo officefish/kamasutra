@@ -5,11 +5,13 @@ class ConnectDecoratorFactory {
 
     static MakeDecorator () {
         return (WrappedComponent) => {
-            class Decorator extends React.Component {
+            class ConnectDecorator extends React.Component {
                 render() { return <WrappedComponent {...this.props}/> }
             }
-            const Connector = connect(...arguments)(Decorator)
-            return Connector
+
+            return connect(...arguments)(ConnectDecorator)
+            //const Connector = connect(...arguments)(ConnectDecorator)
+            //return Connector
         }
     }
 }

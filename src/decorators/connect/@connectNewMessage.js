@@ -1,7 +1,5 @@
 import {SendNewMessageAction, UpdateNewMessagePreviewAction} from "../../redux/messengerReducer";
-import React from "react";
 import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
-
 
 let mapStateToProps = (state) =>
 {

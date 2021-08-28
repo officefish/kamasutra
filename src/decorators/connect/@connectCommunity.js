@@ -1,10 +1,8 @@
-import { connect } from "react-redux";
 import {
     SelectCommunityPageAC,
     StartFollowingAction,
     StopFollowingAction, ToggleIsFetchingAC
 } from "../../redux/communityReducer";
-import React from "react";
 import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>

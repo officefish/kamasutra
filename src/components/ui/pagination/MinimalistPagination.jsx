@@ -1,10 +1,6 @@
 
 
-export const getTotalPages = (itemsPerPage, totalItems) => {
-    return Math.ceil( totalItems / itemsPerPage )
-}
-
-let MinimalistPagination = (props) => {
+const MinimalistPagination = (props) => {
 
     /** Pagination fields */
     const currentPage = props.data.currentPage

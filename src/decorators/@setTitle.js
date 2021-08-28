@@ -46,17 +46,17 @@ export const setTitle = (getTitle) => (WrappedComponent) => {
         componentDidMount() {
             this.updateTitle(this.props)
         }
-        componentWillReceiveProps(props) {
-            this.updateTitle(props)
-        }
+
+        //componentWillReceiveProps(props) {
+        //    this.updateTitle(props)
+        //}
 
         render() {
             return <WrappedComponent {...this.props} />
         }
     }
 
-    const SetTitleDecoratorConnector = connect(mapStateToProps, mapDispatchToProps)(SetTitleDecorator)
-    return SetTitleDecoratorConnector
+    return connect(mapStateToProps, mapDispatchToProps)(SetTitleDecorator)
 
 }
 

@@ -1,7 +1,6 @@
 import Member from "./Member";
 
 import React from "react";
-import MinimalistPagination, {getTotalPages} from "../../ui/pagination/MinimalistPagination";
 import CommunityRemoteService from "../../../service/CommunityRemoteService";
 import connectCommunity from "../../../decorators/connect/@connectCommunity";
 import CommunityListPage from "./CommunityListPage";
@@ -58,7 +57,7 @@ class CommunityList extends React.Component {
         pagination.currentPage = this.props.pagination.currentPage
 
         /** Total number of pages needs tp represent all community members */
-        pagination.totalPages = getTotalPages(this.props.pagination.usersPerPage, this.props.pagination.totalUsers)
+        pagination.totalPages = this.__getTotalPages(this.props.pagination.usersPerPage, this.props.pagination.totalUsers)
 
         /** Setup pagination range limits */
         pagination.min = 1
@@ -80,6 +79,10 @@ class CommunityList extends React.Component {
         )
     }
 
+    __getTotalPages = (itemsPerPage, totalItems) => {
+        return Math.ceil( totalItems / itemsPerPage )
+    }
+
     /** Render jsx view */
     render ()
     {
@@ -95,8 +98,11 @@ class CommunityList extends React.Component {
                     key={user.id}
                  /> )
         return <div>
-            <CommunityListPage members={members} isFetching={this.props.pagination.isFetching}/>
-            <MinimalistPagination data={paginationData} onSelect={this.SelectPageRequestController}/>
+            <CommunityListPage members={members}
+                               isFetching={this.props.pagination.isFetching}
+                               pagination={paginationData}
+                               selectPage={this.SelectPageRequestController}
+            />
         </div>
     }
 }
