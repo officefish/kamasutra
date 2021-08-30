@@ -12,19 +12,18 @@ import Profile from './components/profile/Profile';
 import { Route, Switch } from 'react-router-dom';
 import Community from './components/community/Community';
 import {ThemeProvider} from "styled-components";
-import {GlobalStyle} from "./layout/layout";
-
-//color:  ${props => (props.whiteColor ? 'white' : 'black')};
-
+import {
+    GlobalStyle,
+    GlobalContent
+} from "./layout/layout";
 
 const App = () =>
 {
     return (
         <ThemeProvider theme={{ fontFamily: 'Helvetica Neue' }}>
-            <div className="h-screen p-5">
                 <Header />
                 <Navigation />
-                <div >
+                <GlobalContent >Content
                     <Switch>
                         <Route path = "/profile">
                             <Profile />
@@ -36,8 +35,7 @@ const App = () =>
                             <Community />
                         </Route>
                     </Switch>
-                </div>
-            </div>
+                </GlobalContent>
         <GlobalStyle />
         </ThemeProvider>
     )
