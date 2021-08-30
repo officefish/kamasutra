@@ -63,6 +63,9 @@ class CommunityList extends React.Component {
         pagination.min = 1
         pagination.max = pagination.totalPages
 
+        /** Pagination possible input */
+        pagination.possiblePage = this.props.pagination.possiblePage
+
         return pagination
     }
 
@@ -102,6 +105,7 @@ class CommunityList extends React.Component {
                                isFetching={this.props.pagination.isFetching}
                                pagination={paginationData}
                                selectPage={this.SelectPageRequestController}
+                               possiblePageInput={this.props.possiblePageInput}
             />
         </div>
     }

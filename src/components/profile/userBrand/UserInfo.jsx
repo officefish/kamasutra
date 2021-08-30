@@ -1,9 +1,8 @@
 
-import style from "../Profile.module.css"
 
 const UserInfo = () => {
     return (
-        <div className ={style.UserInfo}>Info</div>
+        <div >Info</div>
     );
 }
 

@@ -1,4 +1,5 @@
 import {
+    PossibleInputPageAC,
     SelectCommunityPageAC,
     StartFollowingAction,
     StopFollowingAction, ToggleIsFetchingAC
@@ -23,7 +24,10 @@ let mapStateToProps = (state) =>
             currentPage: state.community.currentPage,
 
             /** Data isFetching from remote server status */
-            isFetching: state.community.isFetching
+            isFetching: state.community.isFetching,
+
+            /** Temporary page value which is used for pagination */
+            possiblePage: state.community.possiblePage
         }
     }
 }
@@ -34,25 +38,27 @@ let mapDispatchToProps = (dispatch) =>
         /** Follow member with given id */
         follow: (id) =>
         {
-            const action = StartFollowingAction(id)
-            dispatch(action)
+            dispatch(StartFollowingAction(id))
         },
         /** Unfollow member with given id */
         unfollow: (id) =>
         {
-            const action = StopFollowingAction(id)
-            dispatch(action)
+            dispatch(StopFollowingAction(id))
         },
         /** Show community members depends on current page */
         selectPage: (members, pageNumber, totalUsers) =>
         {
-            const action = SelectCommunityPageAC(members, pageNumber, totalUsers)
-            dispatch(action)
+            dispatch(SelectCommunityPageAC(members, pageNumber, totalUsers))
         },
         /** Set current isFetching data from remote server status */
-        toggleIsFetching: isFetching => {
-            const action = ToggleIsFetchingAC(isFetching)
-            dispatch(action)
+        toggleIsFetching: isFetching =>
+        {
+            dispatch(ToggleIsFetchingAC(isFetching))
+        },
+        /** Change temporary input page in pagination widget */
+        possiblePageInput: possiblePage =>
+        {
+            dispatch(PossibleInputPageAC(possiblePage))
         }
     }
 }

@@ -1,5 +1,3 @@
-import style from "./Messenger.module.css"
-
 import React from "react";
 import {setTitle} from "../../decorators/@setTitle";
 import NewMessage from "./newMessage/NewMessage";
@@ -13,7 +11,7 @@ import DialogList from "./dialogList/DialogList";
 class Messenger extends React.Component
 {
     render () {
-        return <div className={style.DialogGrid}>
+        return <div >
             <DialogList />
             <div>
                 <NewMessage />

@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import style from './Navigation.module.css';
 
 const Navigation = () => {
     return (
-        <header className={style.NavSidebar}>
-            <nav className={style.Navigation}>
+        <header >
+            <nav >
                 <ul>
                 <li><NavLink to="/profile">Feed</NavLink></li>
                 <li><NavLink to="/messenger">Messages</NavLink></li>

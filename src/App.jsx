@@ -1,5 +1,8 @@
 import logo from './logo.svg';
-import style from './App.module.css';
+
+import './styles/tailwind.css';
+import tw from 'tailwind-styled-components'
+import './styles/theme.css'
 
 import Header from './components/header/Header';
 import Navigation from "./components/navigation/Navigation"
@@ -11,10 +14,10 @@ import Community from './components/community/Community';
 
 const App = () =>
 {
-    return <div className = { style.App }>
+    return <div >
                 <Header />
                 <Navigation />
-                <div className = { style.Content }>
+                <div >
                     <Switch>
                         <Route path = "/profile">
                             <Profile />

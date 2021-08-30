@@ -1,4 +1,3 @@
-import style from "./../Post.module.css"
 import React from "react";
 import connectNewPost from "../../../decorators/connect/@connectNewPost";
 
@@ -21,7 +20,7 @@ class NewPost extends React.Component {
 
     render () {
         return (
-            <div className={style.NewPost}>
+            <div >
                 <div>
                     <textarea onChange={this.onNewPostPreviewUpdate} value={this.props.preview}/>
                 </div>

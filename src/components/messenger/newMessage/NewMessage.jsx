@@ -1,4 +1,3 @@
-import style from "../Messenger.module.css"
 import React from "react";
 import connectNewMessage from "../../../decorators/connect/@connectNewMessage";
 
@@ -11,7 +10,6 @@ class NewMessage extends React.Component {
         /** IO Controllers */
         this.sendMessageController = props.sendMessage
         this.updatePreviewController = props.updatePreview
-        debugger
     }
 
     /** Send message button Listener */
@@ -22,7 +20,7 @@ class NewMessage extends React.Component {
 
     render () {
         return (
-            <div className={style.NewMessage}>
+            <div>
                 <div>
                     <textarea onChange={this.onNewMessagePreviewUpdate} value={this.props.preview}/>
                 </div>

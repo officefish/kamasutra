@@ -1,10 +1,9 @@
-import style from "../Post.module.css"
 
 const Post = (props) => {
     return (
-        <div className={style.Post}>
+        <div>
             {props.data}
-            <div className="like">like:{props.numLikes}</div>
+            <div >like:{props.numLikes}</div>
         </div>
       
     );

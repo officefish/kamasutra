@@ -1,9 +1,7 @@
-import style from "../Messenger.module.css"
-
 const Message = (props) => {
     let id = props.id;
     return (
-        <div className={style.Message}>
+        <div >
             {id}, {props.text}
         </div>
     );

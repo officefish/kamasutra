@@ -1,5 +1,3 @@
-import style from './Profile.module.css';
-
 import UserBrand from './userBrand/UserBrand';
 import Feed from '../feed/Feed';
 import React from "react";
@@ -11,7 +9,7 @@ import {setTitle} from "../../decorators/@setTitle";
 })
 class Profile extends React.Component {
     render () {
-        return  <div className={style.Profile}>
+        return  <div>
             <UserBrand/>
             <Feed/>
         </div>

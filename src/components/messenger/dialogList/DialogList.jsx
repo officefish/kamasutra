@@ -1,5 +1,4 @@
 import Dialog from "./Dialog"
-import style from "../Messenger.module.css"
 import React from "react";
 import connectDialogList from "../../../decorators/connect/@connectDialogList";
 
@@ -13,7 +12,7 @@ class DialogList extends React.Component {
                 id={dialog.id}
                 key={dialog.id}
             /> )
-        return <div className={style.DialogList}>Dialogs:{dialogs}</div>
+        return <div >Dialogs:{dialogs}</div>
     }
 }
 export default DialogList;
