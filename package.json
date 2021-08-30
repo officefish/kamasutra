@@ -44,11 +44,13 @@
       "last 1 safari version"
     ]
   },
+  "resolutions": {
+    "styled-components": "^5.3.1"
+  },
   "devDependencies": {
     "autoprefixer": "^9.7.5",
     "postcss": "postcss@^7",
     "postcss-cli": "^7.1.0",
-    "styled-components": "^5.3.1",
     "tailwind-styled-components": "^2.0.3",
     "tailwindcss": "^1.8.10",
     "@babel/core": "^7.15.0",

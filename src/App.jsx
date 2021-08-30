@@ -11,10 +11,17 @@ import Profile from './components/profile/Profile';
 
 import { Route, Switch } from 'react-router-dom';
 import Community from './components/community/Community';
+import {ThemeProvider} from "styled-components";
+import {GlobalStyle} from "./layout/layout";
+
+//color:  ${props => (props.whiteColor ? 'white' : 'black')};
+
 
 const App = () =>
 {
-    return <div >
+    return (
+        <ThemeProvider theme={{ fontFamily: 'Helvetica Neue' }}>
+            <div className="h-screen p-5">
                 <Header />
                 <Navigation />
                 <div >
@@ -31,5 +38,9 @@ const App = () =>
                     </Switch>
                 </div>
             </div>
+        <GlobalStyle />
+        </ThemeProvider>
+    )
+
 }
 export default App;
