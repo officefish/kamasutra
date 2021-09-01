@@ -1,21 +1,18 @@
 import {
     FixedWidthHeaderContainer,
-    GlobalHeader, HeaderBar, StyledItems
+    GlobalHeader, HeaderBar
 } from "../../layout/layout";
-import LogoItem from "./logo/LogoItem";
-import SearchItem from "./search/SearchItem";
-import NotificationItem from "./notification/NotificationItem";
+import HeaderBarLeftSideItems from "./HeaderBarLeftSideItems";
+import HeaderBarRightSideItems from "./HeaderBarRightSideItems";
+
 
 const Header = () => {
     return (
         <GlobalHeader >
             <FixedWidthHeaderContainer>
                 <HeaderBar>
-                    <StyledItems>
-                        <LogoItem />
-                        <SearchItem />
-                        <NotificationItem />
-                    </StyledItems>
+                   <HeaderBarLeftSideItems />
+                   <HeaderBarRightSideItems />
                 </HeaderBar>
             </FixedWidthHeaderContainer>
         </GlobalHeader>

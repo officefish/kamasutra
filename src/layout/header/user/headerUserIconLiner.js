@@ -1,8 +1,7 @@
 import tw from 'tailwind-styled-components'
 
 /** Div which contains Logo svg */
-export const StyledItems = tw.div`
-   h-full 
-   flex 
-   items-center
+export const HeaderUserIconLiner = tw.div`
+   mx-3
+   flex-shrink-0
     `
