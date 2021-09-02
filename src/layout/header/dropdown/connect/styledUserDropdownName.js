@@ -8,5 +8,5 @@ const UserNameBase = styled.div`
 /** Div which contains Logo svg */
 export const StyledUserDropdownName = tw(UserNameBase)`
    truncate
-   text-blue-700
+   text-blue-800
     `
