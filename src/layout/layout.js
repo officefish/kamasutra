@@ -26,3 +26,10 @@ export {HeaderUserIconLiner} from "./header/user/headerUserIconLiner"
 export {HeaderUserIconImg} from "./header/user/headerUserIconImg"
 export {StyledHeaderUserName} from "./header/user/StyledHeaderUserName"
 export {HeaderUserDropdownSVG} from "./header/user/HeaderUserDropdownSVG"
+export {UserDropdownParent} from "./header/dropdown/userDropdownParent"
+export {StyledUserDropdown} from "./header/dropdown/userDropdown"
+export {UserDropdownLiner} from "./header/dropdown/userDropdownLiner"
+export {StyledConnectItem} from './header/dropdown/connect/styledConnectItem'
+export {UserDropdownIconLiner} from './header/dropdown/connect/userDropdownIconLiner'
+export {StyledUserDropdownName} from './header/dropdown/connect/styledUserDropdownName'
+export {StyledUserDropdownMessage} from './header/dropdown/connect/styledUserDropdownMessage'

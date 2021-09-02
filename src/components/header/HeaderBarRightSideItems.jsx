@@ -1,17 +1,15 @@
 import React from "react";
-import {StyledRightSideItems} from "../../layout/layout";
-import HeaderUserIcon from "./user/HeaderUserIcon";
-import HeaderUserName from "./user/HeaderUserName";
-import HeaderUserDropdownControl from "./user/HeaderUserDropdownControl";
+import {UserDropdownParent} from "../../layout/layout";
+import UserItem from "./user/UserItem";
+import UserDropdown from  "./dropdown/UserDropdown"
 
 class HeaderBarRightSideItems extends React.Component {
 
     render () {
-        return <StyledRightSideItems>
-            <HeaderUserName />
-            <HeaderUserIcon />
-            <HeaderUserDropdownControl />
-        </StyledRightSideItems>
+        return <UserDropdownParent>
+           <UserItem />
+           <UserDropdown />
+        </UserDropdownParent>
     }
 }
 export default HeaderBarRightSideItems
