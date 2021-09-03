@@ -1,4 +1,4 @@
-import {PublishNewPostAction, UpdateNewPostPreviewAction} from "../../redux/profileReducer";
+import {PublishNewPostAction, UpdateNewPostPreviewAction} from "../../redux/connect/profileReducer";
 import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>

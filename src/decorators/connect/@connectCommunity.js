@@ -3,7 +3,7 @@ import {
     SelectCommunityPageAC,
     StartFollowingAction,
     StopFollowingAction, ToggleIsFetchingAC
-} from "../../redux/communityReducer";
+} from "../../redux/connect/communityReducer";
 import ConnectDecoratorFactory from "./ConnectDecoratorFactory";
 
 let mapStateToProps = (state) =>

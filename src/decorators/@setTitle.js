@@ -5,7 +5,7 @@
  */
 import React from "react";
 import {connect} from "react-redux";
-import {SetTitleAC} from "../redux/titleReducer";
+import {SetTitleAC} from "../redux/ux/titleReducer";
 
 /** SetTitle redux wrapper */
 let mapStateToProps = (state) =>

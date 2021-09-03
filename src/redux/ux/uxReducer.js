@@ -4,7 +4,7 @@ const TOGGLE_GLOBAL_PRELOAD = 'TOGGLE_GLOBAL_PRELOAD'
 
 let initialState =
 {
-    /** Show global preloader while fetching some data or passing content generation*/
+    /** Show global preloader while fetching some data or passing connect generation*/
     isGlobalPreloader:false
 }
 

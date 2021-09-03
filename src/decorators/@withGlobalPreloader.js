@@ -1,5 +1,5 @@
-/** Show global preloader when user waiting some data or content generation passes */
-import {ToggleGlobalPreloaderAC} from "../redux/uxReducer";
+/** Show global preloader when user waiting some data or connect generation passes */
+import {ToggleGlobalPreloaderAC} from "../redux/ux/uxReducer";
 import React from "react";
 import {connect} from "react-redux";
 import StackPreloader from "../components/ui/StackPreloader";
