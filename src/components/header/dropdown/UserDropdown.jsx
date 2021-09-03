@@ -7,27 +7,40 @@ import HelpItem from "./help/HelpItem";
 import LogoutItem from "./logout/LogoutItem";
 import {dropdownComponent} from "../../../decorators/@dropdown";
 
-@dropdownComponent('headerDropdown')
+const ref = React.createRef()
+
+@dropdownComponent('headerDropdown', ref)
 class UserDropdown extends React.Component {
 
     constructor(props) {
         //debugger
         super(props);
-        debugger
+
     }
 
     render () {
+        return  <StyledUserDropdown ref={ref}>
+                        <UserDropdownLiner>
+                            <ConnectItem/>
+                            <UserDropdownSpacer/>
+                            <SettingsItem/>
+                            <HelpItem/>
+                            <UserDropdownSpacer/>
+                            <LogoutItem/>
+                        </UserDropdownLiner>
+                    </StyledUserDropdown>
 
-         return <StyledUserDropdown>
-                <UserDropdownLiner>
-                    <ConnectItem/>
-                    <UserDropdownSpacer/>
-                    <SettingsItem/>
-                    <HelpItem/>
-                    <UserDropdownSpacer/>
-                    <LogoutItem/>
-                </UserDropdownLiner>
-            </StyledUserDropdown>
+
+         // return <StyledUserDropdown>
+         //        <UserDropdownLiner>
+         //            <ConnectItem/>
+         //            <UserDropdownSpacer/>
+         //            <SettingsItem/>
+         //            <HelpItem/>
+         //            <UserDropdownSpacer/>
+         //            <LogoutItem/>
+         //        </UserDropdownLiner>
+         //    </StyledUserDropdown>
 
 
     }

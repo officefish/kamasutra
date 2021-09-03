@@ -21,24 +21,30 @@ let mapDispatchToProps = (dispatch) =>
 }
 
 /** Decorator function for wrapped components which needs preloading  */
-export const dropdownComponent = label => (WrappedComponent) => {
+export const dropdownComponent = (label, ref) => (WrappedComponent) => {
 
     class Decorator extends React.Component {
 
         constructor(props) {
             super(props);
             this.label = label
-
-            this.wrappedComponentRef = React.createRef();
+            this.absoluteChildRef = ref
             this.handleClickOutside = this.handleClickOutside.bind(this);
         }
 
         handleClickOutside = event => {
+            /** Get event path Dom hierarchy */
             const path = event.path || (event.composedPath && event.composedPath());
-            if (!path.includes(this.wrappedComponentRef.current)) {
 
-                console.log(path)
-                console.log(this.wrappedComponentRef.current)
+            /** dropdown DOM elements */
+            const absoluteChild = this.absoluteChildRef.current
+            const relativeParent = this.absoluteChildRef.current.parentElement
+
+            /** if path not includes dropdown or dropdown parent */
+            if (!path.includes(absoluteChild)
+            &&  !path.includes(relativeParent))
+            {
+                this.props.toggleDropdown(false, this.label)
             }
         }
 
@@ -46,26 +52,19 @@ export const dropdownComponent = label => (WrappedComponent) => {
 
         render()
         {
-            /** this if calls bad state warning */
+            /** current dropdown status */
             const currentDropdown = this.props.dropdowns.find(dropdown => dropdown.label === this.label)
 
-            if (currentDropdown && currentDropdown.isOpen) {
+            /** Render dropdown if open */
+            if (currentDropdown && currentDropdown.isOpen)
+            {
                 document.addEventListener("click", this.handleClickOutside);
-
-                const wrappedComponent =  <WrappedComponent
-                    {...this.props}
-                />
-
-                console.log (wrappedComponent._reactInternals)
-                //console.log (wrappedComponent._reactInternals.child.child)
-                //console.log (wrappedComponent._reactInternals.child.child.ref=this.wrappedComponentRef)
-
-                return wrappedComponent
-
-
-            } else {
+                return  <WrappedComponent {...this.props}/>
+            }
+            /** Render empty div if not */
+            else {
                 document.removeEventListener("click", this.handleClickOutside);
-                return <div className='absolute'/>;
+                return <></>;
             }
         }
     }
