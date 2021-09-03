@@ -1,8 +1,6 @@
-import React, {useEffect, useRef} from "react";
-import ReactDOM from "react-dom";
+import React from "react";
 import {connect} from "react-redux";
 import {ToggleDropdownAC} from "../redux/ux/dropdownReducer";
-
 
 let mapStateToProps = (state) =>
 {
@@ -48,8 +46,6 @@ export const dropdownComponent = (label, ref) => (WrappedComponent) => {
             }
         }
 
-
-
         render()
         {
             /** current dropdown status */
@@ -75,6 +71,7 @@ export const withDropdown = label => (WrappedComponent) => {
 
     class Decorator extends React.Component {
 
+        /** Decorator for Relative parent */
         constructor(props) {
             super(props);
             this.label = label
@@ -86,7 +83,6 @@ export const withDropdown = label => (WrappedComponent) => {
         }
 
         render() {
-            /** this if calls bad state warning */
             return <WrappedComponent {...this.props} dropdownOn={this.handleDropdownOn}/>
         }
     }

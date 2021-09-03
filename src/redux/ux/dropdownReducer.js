@@ -4,7 +4,6 @@ const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN'
 
 let initialState =
     {
-        /** Show global preloader while fetching some data or passing connect generation*/
         dropdowns:[
             { isOpen: false, label: "headerDropdown", children: null }
         ]
