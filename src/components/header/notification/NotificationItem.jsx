@@ -1,9 +1,18 @@
 import React from "react";
-import {StyledNotificationSVG} from "../../../layout/layout";
+import {
+    HeaderNotificationAttentionLiner,
+    NotificationHeaderControlsLiner,
+    StyledNotificationSVG
+} from "../../../layout/layout";
 
 class NotificationItem extends React.Component {
     render () {
-        return <StyledNotificationSVG />
+        return <NotificationHeaderControlsLiner>
+            <StyledNotificationSVG />
+            <HeaderNotificationAttentionLiner>
+                1
+            </HeaderNotificationAttentionLiner>
+        </NotificationHeaderControlsLiner>
     }
 }
 export default NotificationItem

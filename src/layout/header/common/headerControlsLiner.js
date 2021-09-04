@@ -1,7 +1,7 @@
 import tw from "tailwind-styled-components";
 
 /** Controls svg layout setup */
-export const ControlsLiner = tw.div`
+export const HeaderControlsLiner = tw.div`
    px-2
    flex
    w-16 
@@ -12,4 +12,7 @@ export const ControlsLiner = tw.div`
    group
    hover:bg-gray-100
    cursor-pointer 
+   `
+export const NotificationHeaderControlsLiner = tw(HeaderControlsLiner)`
+   relative
    `

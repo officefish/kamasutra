@@ -43,6 +43,8 @@ export {UserDropdownSpacer} from './header/dropdown/userDropdownSpacer'
 export {StyledDropdownHelpItem} from './header/dropdown/help/styledDropdownHelpItem'
 export {StyledDropdownLogoutItem} from './header/dropdown/logout/styledDropdownLogoutItem'
 export {StyledDropdownSettingsItem} from './header/dropdown/settings/styledDropdownSettingsItem'
+export {NotificationHeaderControlsLiner} from './header/common/headerControlsLiner'
+export {HeaderNotificationAttentionLiner} from './header/notification/HeaderNotificationAttentionLiner'
 
 /** Navigation */
 export {NavigationLiner} from './navigation/navigationLiner'
