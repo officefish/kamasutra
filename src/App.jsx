@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 
 import './styles/tailwind.css';
-import tw from 'tailwind-styled-components'
 import './styles/theme.css'
 
 import Header from './components/header/Header';
@@ -14,31 +13,58 @@ import Community from './components/community/Community';
 import {ThemeProvider} from "styled-components";
 import {
     GlobalStyle,
-    GlobalContent
+    GlobalContainer, GlobalDisplay, LeftColumn, CenterColumn, RightColumn
 } from "./layout/layout";
 
 const App = () =>
 {
     return (
         <ThemeProvider theme={{ fontFamily: 'Helvetica Neue' }}>
-                <Header />
-                <Navigation />
-                <GlobalContent >Content
-                    <Switch>
-                        <Route path = "/profile">
-                            <Profile />
-                        </Route>
-                        <Route path = "/messenger">
-                            <Messenger />
-                        </Route>
-                        <Route path = "/community">
-                            <Community />
-                        </Route>
-                    </Switch>
-                </GlobalContent>
+            <Header />
+            <GlobalContainer>
+                <GlobalDisplay>
+                    <LeftColumn>
+                        <div className='bg-white p-4'>
+                            <nav>
+                                <li>
+                                    Моя страница
+                                </li>
+                                <li>
+                                    Новости
+                                </li>
+                            </nav>
+                        </div>
+                    </LeftColumn>
+                    <CenterColumn>
+                        <div className='bg-white p-4'>
+                            Center
+                        </div>
+                    </CenterColumn >
+                    <RightColumn>
+                        <div className='bg-white p-4'>
+                            Right
+                        </div>
+                    </RightColumn>
+                </GlobalDisplay>
+            </GlobalContainer>
         <GlobalStyle />
         </ThemeProvider>
     )
 
 }
 export default App;
+
+// <Navigation />
+// <GlobalContent >Content
+//     <Switch>
+//         <Route path = "/profile">
+//             <Profile />
+//         </Route>
+//         <Route path = "/messenger">
+//             <Messenger />
+//         </Route>
+//         <Route path = "/community">
+//             <Community />
+//         </Route>
+//     </Switch>
+// </GlobalContent>

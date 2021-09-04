@@ -8,7 +8,7 @@ import LogoutItem from "./logout/LogoutItem";
 import {dropdownComponent} from "../../../decorators/@dropdown";
 
 /** Reference to dropdown absolute container*/
-const dropdownRootRef = React.createRef()
+const dropdownRootRef = React.createRef(null)
 
 @dropdownComponent('headerDropdown', dropdownRootRef)
 class UserDropdown extends React.Component {

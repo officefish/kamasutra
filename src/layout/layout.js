@@ -4,6 +4,12 @@ export {GlobalStyle} from "./global/globalStyle"
 export {GlobalHeader} from "./global/globalHeader"
 export {GlobalNavigation} from "./global/globalNavigation"
 export {GlobalContent} from "./global/globalContent"
+export {GlobalContainer} from './global/globalContainer'
+export {GlobalDisplay} from './global/globalDisplay'
+
+export {LeftColumn} from './global/columns/leftColumn'
+export {CenterColumn} from './global/columns/centerColumn'
+export {RightColumn} from './global/columns/rightColumn'
 
 /** Header */
 export {FixedWidthHeaderContainer} from "./header/headerContainer"
@@ -37,3 +43,5 @@ export {UserDropdownSpacer} from './header/dropdown/userDropdownSpacer'
 export {StyledDropdownHelpItem} from './header/dropdown/help/styledDropdownHelpItem'
 export {StyledDropdownLogoutItem} from './header/dropdown/logout/styledDropdownLogoutItem'
 export {StyledDropdownSettingsItem} from './header/dropdown/settings/styledDropdownSettingsItem'
+
+/** Navigation */
