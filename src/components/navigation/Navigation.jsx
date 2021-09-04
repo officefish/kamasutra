@@ -1,18 +1,70 @@
 import { NavLink } from 'react-router-dom';
-import {GlobalNavigation} from "../../layout/layout";
+import {
+    CommunityNavigationSVG,
+    GlobalNavigation, MessengerNavigationSVG, NavigationItemLabel,
+    NavigationItemLiner,
+    NavigationLiner,
+    NavigationListItem, NewsNavigationSVG,
+    ProfileNavigationSVG
+} from "../../layout/layout";
 
 const Navigation = () => {
-    return (
+    return <NavigationLiner>
+            <GlobalNavigation >
+                <NavigationListItem>
+                    <NavLink to="/profile">
+                        <NavigationItemLiner>
+                            <ProfileNavigationSVG />
+                            <NavigationItemLabel>
+                                Моя страница
+                            </NavigationItemLabel>
+                        </NavigationItemLiner>
+                    </NavLink>
+                </NavigationListItem>
+                <NavigationListItem>
+                    <NavLink to="/#">
+                        <NavigationItemLiner>
+                            <NewsNavigationSVG />
+                            <NavigationItemLabel>
+                                Новости
+                            </NavigationItemLabel>
+                        </NavigationItemLiner>
+                    </NavLink>
+                </NavigationListItem>
+                <NavigationListItem>
+                    <NavLink to="/messenger">
+                        <NavigationItemLiner>
+                            <MessengerNavigationSVG />
+                            <NavigationItemLabel>
+                                Сообщения
+                            </NavigationItemLabel>
+                        </NavigationItemLiner>
+                    </NavLink>
+                </NavigationListItem>
+                <NavigationListItem>
+                    <NavLink to="/community">
+                        <NavigationItemLiner>
+                            <CommunityNavigationSVG />
+                            <NavigationItemLabel>
+                                Сообщество
+                            </NavigationItemLabel>
+                        </NavigationItemLiner>
+                    </NavLink>
+                </NavigationListItem>
+            </GlobalNavigation>
+            </NavigationLiner>
 
-        <GlobalNavigation >
-            <ul>
-            <li><NavLink to="/profile">Feed</NavLink></li>
-            <li><NavLink to="/messenger">Messages</NavLink></li>
-            <li><NavLink to="/community">Users</NavLink></li>
-            <li><a href="#">Settings</a></li>
-            </ul>
-        </GlobalNavigation>
-    );
 }
 
 export default Navigation;
+//
+// <div className='bg-white p-4'>
+//     <nav>
+//         <li>
+//             Моя страница
+//         </li>
+//         <li>
+//             Новости
+//         </li>
+//     </nav>
+// </div>

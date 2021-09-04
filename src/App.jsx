@@ -24,16 +24,7 @@ const App = () =>
             <GlobalContainer>
                 <GlobalDisplay>
                     <LeftColumn>
-                        <div className='bg-white p-4'>
-                            <nav>
-                                <li>
-                                    Моя страница
-                                </li>
-                                <li>
-                                    Новости
-                                </li>
-                            </nav>
-                        </div>
+                        <Navigation />
                     </LeftColumn>
                     <CenterColumn>
                         <div className='bg-white p-4'>
