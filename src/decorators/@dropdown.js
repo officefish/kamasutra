@@ -34,6 +34,9 @@ export const dropdownComponent = (label, ref) => (WrappedComponent) => {
             /** Get event path Dom hierarchy */
             const path = event.path || (event.composedPath && event.composedPath());
 
+            /** Get toggleDropdown dispatcher from props */
+            const {toggleDropdown} = this.props
+
             /** dropdown DOM elements */
             const absoluteChild = this.absoluteChildRef.current
             const relativeParent = this.absoluteChildRef.current.parentElement
@@ -42,7 +45,8 @@ export const dropdownComponent = (label, ref) => (WrappedComponent) => {
             if (!path.includes(absoluteChild)
             &&  !path.includes(relativeParent))
             {
-                this.props.toggleDropdown(false, this.label)
+                /** Call toggleDropdown */
+                toggleDropdown && toggleDropdown(false, this.label)
             }
         }
 

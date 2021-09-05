@@ -6,4 +6,6 @@ export const UserDropdownLiner = tw.div`
    bg-white 
    border 
    py-1
+   border-gray-300
+   rounded-b-sm
     `

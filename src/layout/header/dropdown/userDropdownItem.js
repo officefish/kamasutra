@@ -9,7 +9,7 @@ export const UserDropdownItem = tw.a`
    hover:bg-gray-100
     `
 export const UserDropdownSystemItem = tw(UserDropdownItem)`
-    text-blue-800
+    text-blue-700
     text-xs
     py-2
     `

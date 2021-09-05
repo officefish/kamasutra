@@ -4,7 +4,7 @@ import {StyledAdvancedNavigationItem} from "../../../../layout/layout";
 
 const DevelopersItem = () => <StyledAdvancedNavigationItem>
     <NavLink to='/#'>
-        Разработчики
+        Разработчикам
     </NavLink>
 </StyledAdvancedNavigationItem>
 export default DevelopersItem

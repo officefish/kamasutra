@@ -5,7 +5,8 @@ const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN'
 let initialState =
     {
         dropdowns:[
-            { isOpen: false, label: "headerDropdown", children: null }
+            { isOpen: false, label: "headerDropdown" },
+            { isOpen: false, label: "advancedDropdown" }
         ]
     }
 
