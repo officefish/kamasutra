@@ -24,9 +24,7 @@ const dropdownReducer = (state = initialState, action) => {
                 /** Copy dropdowns */
                 dropdowns:[...state.dropdowns]
             }
-
         }
-
         default: return state
     }
 }

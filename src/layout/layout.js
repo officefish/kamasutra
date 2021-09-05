@@ -68,3 +68,16 @@ export {StyledAdvancedDropdownLiner} from './navigation/advanced/dropdown/advanc
 export {StyledAdvancedDropdownList} from './navigation/advanced/dropdown/advancedDropdownList'
 export {StyledAdvancedDropdownListItem} from './navigation/advanced/dropdown/advancedDropdownListItem'
 export {StyledCornerDetail} from './navigation/advanced/dropdown/StyledCornerDetail'
+
+/** Profile */
+export {ProfileCenterSectionLiner} from './profile/profileCenterSectionLiner'
+export {StyledAvatarImg} from './profile/avatar/avatarImg'
+export {AvatarEditButtonLiner} from './profile/avatar/avatarEditButtonLiner'
+export {StyledAvatarEditButton} from './profile/avatar/avatarEditButton'
+export {AvatarListItemLiner} from './profile/avatar/list/avatarListItemLiner'
+export {AvatarListItemSpan} from './profile/avatar/list/avatalListItemSpan'
+
+export {ArchiveItemSVG} from './profile/avatar/list/ArchiveItemSVG'
+export {StatisticsItemSVG} from  './profile/avatar/list/StatisticsItemSVG'
+export {MemoriesItemSVG} from './profile/avatar/list/MemoriesItemSVG'
+export {MoneyTransfersSVG} from './profile/avatar/list/MoneyTransfersSVG'

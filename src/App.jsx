@@ -26,36 +26,26 @@ const App = () =>
                     <LeftColumn>
                         <Navigation />
                     </LeftColumn>
-                    <CenterColumn>
-                        <div className='bg-white p-4'>
-                            Center
-                        </div>
-                    </CenterColumn >
-                    <RightColumn>
-                        <div className='bg-white p-4'>
-                            Right
-                        </div>
-                    </RightColumn>
+                    <Switch>
+                        <Route path = "/profile">
+                            <Profile />
+                        </Route>
+                        <Route path = "/messenger">
+                            <Messenger />
+                        </Route>
+                        <Route path = "/community">
+                            <Community />
+                        </Route>
+                    </Switch>
                 </GlobalDisplay>
             </GlobalContainer>
         <GlobalStyle />
         </ThemeProvider>
     )
-
 }
 export default App;
 
 // <Navigation />
 // <GlobalContent >Content
-//     <Switch>
-//         <Route path = "/profile">
-//             <Profile />
-//         </Route>
-//         <Route path = "/messenger">
-//             <Messenger />
-//         </Route>
-//         <Route path = "/community">
-//             <Community />
-//         </Route>
-//     </Switch>
+//
 // </GlobalContent>
