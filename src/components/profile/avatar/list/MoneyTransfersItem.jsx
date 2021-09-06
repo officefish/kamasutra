@@ -2,7 +2,7 @@ import {NavLink} from "react-router-dom";
 import {AvatarListItemLiner, AvatarListItemSpan, MoneyTransfersSVG} from "../../../../layout/layout";
 
 const MoneyTransfersItem = () => <li>
-    <NavLink to='/#'>
+    <NavLink to='/profile'>
         <AvatarListItemLiner>
             <MoneyTransfersSVG />
             <AvatarListItemSpan>Денежные переводы</AvatarListItemSpan>

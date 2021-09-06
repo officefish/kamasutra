@@ -2,7 +2,7 @@ import {NavLink} from "react-router-dom";
 import {AvatarListItemLiner, AvatarListItemSpan, StatisticsItemSVG} from "../../../../layout/layout";
 
 const StatisticsItem = () => <li>
-    <NavLink to='/#'>
+    <NavLink to='/profile'>
         <AvatarListItemLiner>
             <StatisticsItemSVG />
             <AvatarListItemSpan>Статистика страницы</AvatarListItemSpan>

@@ -7,6 +7,7 @@ export const AvatarListItemLiner = tw.div`
     px-3 
     py-2 
     rounded 
-    text-blue-700 
+    text-gray-400
+    hover:text-blue-700 
     hover:bg-gray-100
     `
