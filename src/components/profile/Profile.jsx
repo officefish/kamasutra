@@ -7,6 +7,8 @@ import AvatarItem from "./avatar/AvatarItem";
 import EditAvatarItem from "./avatar/EditAvatarItem";
 import AvatarListItem from "./avatar/AvatarListItem";
 import {ProfileCenterSectionLiner} from "../../layout/layout";
+import AvatarSection from "./avatar/AvatarSection";
+import FriendsSection from "./friends/FriendsSection";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading profile...'
@@ -16,19 +18,11 @@ class Profile extends React.Component {
     render () {
         return <>
             <CenterColumn>
-                <ProfileCenterSectionLiner>
-                    <AvatarItem />
-                    <EditAvatarItem />
-                    <AvatarListItem />
-                </ProfileCenterSectionLiner>
-                <ProfileCenterSectionLiner>
-                    Friends
-                </ProfileCenterSectionLiner>
+                <AvatarSection />
+                <FriendsSection />
             </CenterColumn >
             <RightColumn>
-                <div className='bg-white p-4'>
-                    Right
-                </div>
+                Right
             </RightColumn>
         </>
     }

@@ -93,3 +93,10 @@ export {AvatarEditListItemLiner} from './profile/avatar/edit/avatarEditListItemL
 export {CropAvatarEditListItemSVG} from './profile/avatar/edit/CropAvatarEditListItemSVG'
 export {UpdateAvatarEditListItemSVG} from './profile/avatar/edit/UpdateAvatarEditListItemSVG'
 export {DecorAvatarEditListItemSVG} from './profile/avatar/edit/DecorAvatarEditListItemSVG'
+
+/** Friends section */
+export {ProfileCenterFriendsSectionLiner} from './profile/friends/profileCenterFriendsSectionLiner'
+export {StyledFriendsSectionHeader} from './profile/friends/styledFriendsSectionHeader'
+export {StyledFriendsNavLink} from './profile/friends/styledFriendsNavLink'
+export {StyledUpdatesNavLink} from './profile/friends/styledUpdatesNavLink'
+export {StyledNumFriendsSpan} from './profile/friends/styledNumFriendsSpan'
