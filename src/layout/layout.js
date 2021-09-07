@@ -96,7 +96,13 @@ export {DecorAvatarEditListItemSVG} from './profile/avatar/edit/DecorAvatarEditL
 
 /** Friends section */
 export {ProfileCenterFriendsSectionLiner} from './profile/friends/profileCenterFriendsSectionLiner'
-export {StyledFriendsSectionHeader} from './profile/friends/styledFriendsSectionHeader'
-export {StyledFriendsNavLink} from './profile/friends/styledFriendsNavLink'
-export {StyledUpdatesNavLink} from './profile/friends/styledUpdatesNavLink'
-export {StyledNumFriendsSpan} from './profile/friends/styledNumFriendsSpan'
+export {StyledFriendsSectionHeader} from './profile/friends/header/styledFriendsSectionHeader'
+export {StyledFriendsNavLink} from './profile/friends/header/styledFriendsNavLink'
+export {StyledUpdatesNavLink} from './profile/friends/header/styledUpdatesNavLink'
+export {StyledNumFriendsSpan} from './profile/friends/header/styledNumFriendsSpan'
+
+/** Friends grid */
+export {StyledFriendsGrid} from './profile/friends/grid/styledFriendsGrid'
+export {FriendsGridItemLiner} from './profile/friends/grid/friendsGridItemLiner'
+export {FriendsGridItemImg} from './profile/friends/grid/friendsGridItemImg'
+export {FriendsGridItemLabel} from './profile/friends/grid/friendsGridItemLabel'

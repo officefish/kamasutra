@@ -3,10 +3,6 @@ import React from "react";
 import {setTitle} from "../../decorators/@setTitle";
 import {CenterColumn} from "../../layout/global/columns/centerColumn";
 import {RightColumn} from "../../layout/global/columns/rightColumn";
-import AvatarItem from "./avatar/AvatarItem";
-import EditAvatarItem from "./avatar/EditAvatarItem";
-import AvatarListItem from "./avatar/AvatarListItem";
-import {ProfileCenterSectionLiner} from "../../layout/layout";
 import AvatarSection from "./avatar/AvatarSection";
 import FriendsSection from "./friends/FriendsSection";
 
@@ -20,7 +16,7 @@ class Profile extends React.Component {
             <CenterColumn>
                 <AvatarSection />
                 <FriendsSection />
-            </CenterColumn >
+            </CenterColumn>
             <RightColumn>
                 Right
             </RightColumn>
@@ -28,4 +24,5 @@ class Profile extends React.Component {
     }
 }
 export default Profile;
+
 
