@@ -1,10 +1,11 @@
-import Feed from '../feed/Feed';
 import React from "react";
 import {setTitle} from "../../decorators/@setTitle";
 import {CenterColumn} from "../../layout/global/columns/centerColumn";
 import {RightColumn} from "../../layout/global/columns/rightColumn";
 import AvatarSection from "./avatar/AvatarSection";
 import FriendsSection from "./friends/FriendsSection";
+import MusicSection from "./music/MusicSection";
+import InfoSection from "./info/InfoSection";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading profile...'
@@ -16,9 +17,10 @@ class Profile extends React.Component {
             <CenterColumn>
                 <AvatarSection />
                 <FriendsSection />
+                <MusicSection />
             </CenterColumn>
             <RightColumn>
-                Right
+                <InfoSection />
             </RightColumn>
         </>
     }

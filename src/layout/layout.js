@@ -71,7 +71,7 @@ export {StyledAdvancedDropdownListItem} from './navigation/advanced/dropdown/adv
 export {StyledCornerDetail} from './navigation/advanced/dropdown/StyledCornerDetail'
 
 /** Profile Avatar */
-export {ProfileCenterSectionLiner} from './profile/profileCenterSectionLiner'
+export {ProfileAvatarCenterSectionLiner} from './profile/avatar/profileAvatarCenterSectionLiner'
 export {StyledAvatarImg} from './profile/avatar/avatarImg'
 export {AvatarEditButtonLiner} from './profile/avatar/avatarEditButtonLiner'
 export {StyledAvatarEditButton} from './profile/avatar/avatarEditButton'
@@ -97,12 +97,16 @@ export {DecorAvatarEditListItemSVG} from './profile/avatar/edit/DecorAvatarEditL
 /** Friends section */
 export {ProfileCenterFriendsSectionLiner} from './profile/friends/profileCenterFriendsSectionLiner'
 export {StyledFriendsSectionHeader} from './profile/friends/header/styledFriendsSectionHeader'
-export {StyledFriendsNavLink} from './profile/friends/header/styledFriendsNavLink'
+export {StyledCenterSectionHeaderNavLink} from './profile/styledCenterSectionHeaderNavLink'
 export {StyledUpdatesNavLink} from './profile/friends/header/styledUpdatesNavLink'
-export {StyledNumFriendsSpan} from './profile/friends/header/styledNumFriendsSpan'
+export {StyledCenterSectionNumSpan} from './profile/styledCenterSectionNumSpan'
 
 /** Friends grid */
 export {StyledFriendsGrid} from './profile/friends/grid/styledFriendsGrid'
 export {FriendsGridItemLiner} from './profile/friends/grid/friendsGridItemLiner'
 export {FriendsGridItemImg} from './profile/friends/grid/friendsGridItemImg'
 export {FriendsGridItemLabel} from './profile/friends/grid/friendsGridItemLabel'
+
+/** Music */
+export {ProfileMusicCenterSectionLiner} from './profile/music/ProfileMusicCenterSectionLiner'
+export {StyledMusicSectionHeader} from './profile/music/header/styledMusicSectionHeader'

@@ -1,7 +1,7 @@
 import tw from 'tailwind-styled-components'
 
 /** Profile  */
-export const ProfileCenterSectionLiner = tw.section`
+export const ProfileAvatarCenterSectionLiner = tw.section`
     bg-white
     pt-4
     pl-4

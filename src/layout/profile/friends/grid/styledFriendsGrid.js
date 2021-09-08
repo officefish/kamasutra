@@ -8,4 +8,5 @@ export const StyledFriendsGrid = tw.div`
     pt-2 
     pl-1 
     pr-1
+    pb-1
     `

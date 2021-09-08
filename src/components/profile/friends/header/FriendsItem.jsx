@@ -1,10 +1,10 @@
-import {StyledNumFriendsSpan} from "../../../../layout/profile/friends/header/styledNumFriendsSpan";
-import {StyledFriendsNavLink} from "../../../../layout/profile/friends/header/styledFriendsNavLink";
+import {StyledCenterSectionNumSpan} from "../../../../layout/profile/styledCenterSectionNumSpan";
+import {StyledCenterSectionHeaderNavLink} from "../../../../layout/profile/styledCenterSectionHeaderNavLink";
 
-const FriendsItem = () => <StyledFriendsNavLink to='/profile'>
+const FriendsItem = () => <StyledCenterSectionHeaderNavLink to='/profile'>
     Друзья
-    <StyledNumFriendsSpan>
+    <StyledCenterSectionNumSpan>
         42
-    </StyledNumFriendsSpan>
-</StyledFriendsNavLink>
+    </StyledCenterSectionNumSpan>
+</StyledCenterSectionHeaderNavLink>
 export default FriendsItem

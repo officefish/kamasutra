@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-
 import './styles/tailwind.css';
 import './styles/theme.css'
 
@@ -13,7 +11,7 @@ import Community from './components/community/Community';
 import {ThemeProvider} from "styled-components";
 import {
     GlobalStyle,
-    GlobalContainer, GlobalDisplay, LeftColumn, CenterColumn, RightColumn
+    GlobalContainer, GlobalDisplay, LeftColumn
 } from "./layout/layout";
 
 const App = () =>
@@ -44,8 +42,3 @@ const App = () =>
     )
 }
 export default App;
-
-// <Navigation />
-// <GlobalContent >Content
-//
-// </GlobalContent>

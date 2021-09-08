@@ -1,11 +1,11 @@
 import AvatarItem from "./AvatarItem";
 import EditAvatarItem from "./EditAvatarItem";
 import AvatarListItem from "./AvatarListItem";
-import {ProfileCenterSectionLiner} from "../../../layout/profile/profileCenterSectionLiner";
+import {ProfileAvatarCenterSectionLiner} from "../../../layout/layout";
 
-const AvatarSection = () => <ProfileCenterSectionLiner>
+const AvatarSection = () => <ProfileAvatarCenterSectionLiner>
     <AvatarItem />
     <EditAvatarItem />
     <AvatarListItem />
-</ProfileCenterSectionLiner>
+</ProfileAvatarCenterSectionLiner>
 export default AvatarSection
