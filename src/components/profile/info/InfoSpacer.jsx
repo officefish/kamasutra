@@ -1,4 +1,6 @@
+import {StyledInfoSpacer} from "../../../layout/layout";
+
 const InfoSpacer = () => {
-    return  <div className='h-px bg-gray-400 my-4'/>
+    return  <StyledInfoSpacer/>
 }
 export default InfoSpacer

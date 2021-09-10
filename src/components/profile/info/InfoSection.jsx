@@ -1,4 +1,7 @@
-import {StyledRightColumnSection} from "../../../layout/layout";
+import {
+    StyledColumnSectionLiner,
+    StyledRightColumnSection
+} from "../../../layout/layout";
 import NameItem from "./name/NameItem";
 import StatusItem from "./name/StatusItem";
 import InfoSpacer from "./InfoSpacer";
@@ -8,13 +11,13 @@ import DetailsButton from "./details/DetailsButton";
 
 const InfoSection = () =>
     <StyledRightColumnSection>
-        <div className='p-4'>
+        <StyledColumnSectionLiner>
             <NameItem name="Сергей Иноземцев" online={true} />
             <StatusItem status='Мирный воин' />
             <InfoSpacer />
             <CityItem city='Санкт-Петербург' />
             <MarriedItem isMarried={false} />
             <DetailsButton />
-        </div>
+        </StyledColumnSectionLiner>
     </StyledRightColumnSection>
 export default InfoSection

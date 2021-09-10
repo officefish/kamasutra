@@ -1,8 +1,9 @@
+import {StyledNameItemLabel, StyledNameItemLiner, StyledOnlineStatusLabel} from "../../../../layout/layout";
 
 const NameItem = props => {
-    return <div className='flex items-center justify-between'>
-        <div className='text-xl'>{props.name}</div>
-        <div className='text-gray-500 text-sm'>{ props.online ? 'На связи' : 'Не на связи'}</div>
-    </div>
+    return <StyledNameItemLiner>
+        <StyledNameItemLabel>{props.name}</StyledNameItemLabel>
+        <StyledOnlineStatusLabel>{ props.online ? 'На связи' : 'Не на связи'}</StyledOnlineStatusLabel>
+    </StyledNameItemLiner>
 }
 export default NameItem

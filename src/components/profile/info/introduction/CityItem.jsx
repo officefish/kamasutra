@@ -1,9 +1,16 @@
+import {
+    StyledIntroItemGrid,
+    StyledIntroItemLabel,
+    StyledIntroItemNavLink,
+    StyledIntroCol_2_Liner
+} from "../../../../layout/layout";
+
 const CityItem = props => {
-    return <div className='grid grid-cols-3 gap-2 my-2'>
-        <div className='text-gray-500 '>Город:</div>
-        <div className='col-span-2'>
-            <a className='text-blue-700 hover:underline' href="">{props.city}</a>
-        </div>
-    </div>
+    return <StyledIntroItemGrid>
+        <StyledIntroItemLabel>Город:</StyledIntroItemLabel>
+        <StyledIntroCol_2_Liner>
+            <StyledIntroItemNavLink to='./profile'>{props.city}</StyledIntroItemNavLink>
+        </StyledIntroCol_2_Liner>
+    </StyledIntroItemGrid>
 }
 export default CityItem

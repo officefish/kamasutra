@@ -1,4 +1,4 @@
 const StatusItem = props => {
-    return <div className=''>{props.status}</div>
+    return <div>{props.status}</div>
 }
 export default StatusItem

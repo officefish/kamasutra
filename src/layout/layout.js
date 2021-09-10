@@ -11,6 +11,7 @@ export {GlobalGrid} from './global/globalGrid'
 export {LeftColumn} from './global/columns/leftColumn'
 export {CenterColumn} from './global/columns/centerColumn'
 export {RightColumn} from './global/columns/rightColumn'
+export {StyledColumnSectionLiner} from './global/columns/styledColumnSectionLiner'
 
 /** Header */
 export {FixedWidthHeaderContainer} from "./header/headerContainer"
@@ -116,3 +117,14 @@ export {StyledMusicSectionHeader} from './profile/music/header/styledMusicSectio
 export {StyledRightColumnSection} from './profile/styledRightColumnSection'
 
 /** Info section */
+export {StyledNameItemLiner} from './profile/info/name/styledNameItemLiner'
+export {StyledNameItemLabel} from './profile/info/name/styledNameItemLabel'
+export {StyledOnlineStatusLabel} from './profile/info/name/styledOnlineStatusLabel'
+export {StyledInfoSpacer} from './profile/info/intro/styledInfoSpacer'
+
+export {StyledIntroItemGrid} from './profile/info/intro/styledIntroItemGrid'
+export {StyledIntroItemLabel} from './profile/info/intro/styledIntroItemLabel'
+export {StyledIntroCol_1_Liner} from './profile/info/intro/styledIntroCol_1_Liner'
+export {StyledIntroCol_2_Liner} from './profile/info/intro/styledIntroCol_2_Liner'
+export {StyledIntroItemNavLink} from './profile/info/intro/styledIntroItemNavLink'
+export {StyledInfoDetailsBtn} from './profile/info/details/styledInfoDetailsBtn'
