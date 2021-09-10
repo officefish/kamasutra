@@ -2,28 +2,26 @@ import React from "react";
 import {connect} from "react-redux";
 import {RegisterHoverAC, ToggleHoverAC} from "../redux/ux/hoverReducer";
 
-
-const withHover = WrappedComponent => {
-
+export const generateRandomKey = () => {
     const key1 = Math.random().toString(36).substring(8)
     const key2 = Math.random().toString(36).substring(8)
-    const randomKey = "hover_" + key1 + "_" + key2
+    return "hover_" + key1 + "_" + key2
+}
 
-    const mapStateToProps = (state) =>
+export const withHover = WrappedComponent => {
+
+    const mapStateToProps = state =>
     {
-        const hover = state.ux.hover.hovers.find((hover) => {return hover.key === randomKey})
-        //debugger
-        return { isHover: hover ? hover.isHover : false }
+        return {hovers:state.ux.hover.hovers}
     }
 
-    const mapDispatchToProps = (dispatch) => {
+    const mapDispatchToProps = dispatch =>
+    {
         return {
-            /** Toggle hover status */
-            toggleHover: (isHover) => {
+            toggleHover: (isHover, randomKey) => {
                 dispatch(ToggleHoverAC(isHover, randomKey))
             },
-
-            registerHover: () => {
+            registerHover: (randomKey) => {
                 dispatch(RegisterHoverAC(randomKey))
             }
         }
@@ -34,25 +32,25 @@ const withHover = WrappedComponent => {
         constructor(props) {
             super(props);
             this.toggleHoverHandler = this.toggleHoverHandler.bind(this)
-
+            this.randomKey = generateRandomKey()
         }
 
         componentDidMount() {
-            this.props.registerHover(randomKey)
+            this.props.registerHover(this.randomKey)
         }
 
         toggleHoverHandler (status) {
-            this.props.toggleHover(status)
+            this.props.toggleHover(status, this.randomKey)
         }
 
         render() {
-            return <WrappedComponent {...this.props} isHover={this.props.isHover} toggleHover={this.toggleHoverHandler} />
+            const hover = this.props.hovers.find((hover) => {return hover.key === this.randomKey})
+            const isHover =  hover ? hover.isHover : false
+
+            return <WrappedComponent {...this.props} isHover={isHover} toggleHover={this.toggleHoverHandler} />
         }
     }
 
-
-
-    //console.log (key1)
     return connect(mapStateToProps, mapDispatchToProps)(Decorator)
 }
 export default withHover

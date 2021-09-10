@@ -4,6 +4,5 @@ import tw from 'tailwind-styled-components'
 export const FriendsGridItemLiner = tw.div`
     px-2 
     mb-2
-    group
     `
 

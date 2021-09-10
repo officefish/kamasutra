@@ -3,7 +3,7 @@ import CropListItem from "./CropListItem";
 import DecorListItem from "./DecorListItem";
 import {EditAvatarListLiner, StyledAvatarEditList} from "../../../../layout/layout";
 
-const EditAvatarList = () => <EditAvatarListLiner>
+const EditAvatarList = (props) => <EditAvatarListLiner $hover={props.isHover}>
     <StyledAvatarEditList>
         <UpdateListItem />
         <CropListItem />

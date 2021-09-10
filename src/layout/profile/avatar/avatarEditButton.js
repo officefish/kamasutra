@@ -7,8 +7,8 @@ export const StyledAvatarEditButton = tw.button`
     rounded 
     w-full 
     px-3 
-    py-1.5 
+    py-2 
     text-sm 
-    text-gray-400 
+    text-gray-700 
     hover:text-opacity-75
     `

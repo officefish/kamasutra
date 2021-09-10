@@ -19,8 +19,16 @@ class FriendsGrid extends React.Component {
 
      render () {
          let friends = this.data
-             .map( friend => <FriendGridItem name={friend.name} src={friend.src} id={friend.id} key={friend.id} /> )
-         return <StyledFriendsGrid>{friends}</StyledFriendsGrid>
+         //    .map( friend => <FriendGridItem name={friend.name} src={friend.src} id={friend.id} key={friend.id} /> )
+         //return <StyledFriendsGrid>{friends}</StyledFriendsGrid>
+         return <StyledFriendsGrid>
+             <FriendGridItem name={friends[0].name} src={friends[0].src} id={friends[0].id} key={friends[0].id} />
+             <FriendGridItem name={friends[1].name} src={friends[1].src} id={friends[1].id} key={friends[1].id} />
+             <FriendGridItem name={friends[2].name} src={friends[2].src} id={friends[2].id} key={friends[2].id} />
+             <FriendGridItem name={friends[3].name} src={friends[3].src} id={friends[3].id} key={friends[3].id} />
+             <FriendGridItem name={friends[4].name} src={friends[4].src} id={friends[4].id} key={friends[4].id} />
+             <FriendGridItem name={friends[5].name} src={friends[5].src} id={friends[5].id} key={friends[5].id} />
+         </StyledFriendsGrid>
      }
 
     // render () { return <div className='grid grid-cols-3 gap-1 pt-2 pl-1 pr-1'>
