@@ -6,6 +6,8 @@ import AvatarSection from "./avatar/AvatarSection";
 import FriendsSection from "./friends/FriendsSection";
 import MusicSection from "./music/MusicSection";
 import InfoSection from "./info/InfoSection";
+import PhotoSection from "./photo/PhotoSection";
+import PublishSection from "./publish/PublishSection";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading profile...'
@@ -21,6 +23,8 @@ class Profile extends React.Component {
             </CenterColumn>
             <RightColumn>
                 <InfoSection />
+                <PhotoSection />
+                <PublishSection />
             </RightColumn>
         </>
     }

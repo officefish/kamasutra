@@ -111,3 +111,8 @@ export {FriendsGridItemLabel} from './profile/friends/grid/friendsGridItemLabel'
 /** Music */
 export {ProfileMusicCenterSectionLiner} from './profile/music/ProfileMusicCenterSectionLiner'
 export {StyledMusicSectionHeader} from './profile/music/header/styledMusicSectionHeader'
+
+/** Right Column */
+export {StyledRightColumnSection} from './profile/styledRightColumnSection'
+
+/** Info section */

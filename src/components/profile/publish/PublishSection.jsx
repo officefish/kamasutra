@@ -1,7 +1,7 @@
 import {StyledRightColumnSection} from "../../../layout/layout";
 
-const InfoSection = () =>
+const PublishSection = () =>
     <StyledRightColumnSection>
-        Info Section
+        Publish Section
     </StyledRightColumnSection>
-export default InfoSection
+export default PublishSection
