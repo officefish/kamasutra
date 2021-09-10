@@ -1,4 +1,3 @@
-import {HeaderControlsLiner} from "../common/headerControlsLiner";
 import {HeaderControlsSVG} from "../common/headerControlsSVG";
 
 export const StyledNotificationSVG = () => {

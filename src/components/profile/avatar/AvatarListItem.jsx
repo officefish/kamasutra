@@ -1,4 +1,3 @@
-import {NavLink} from "react-router-dom";
 import React from "react";
 import StatisticsItem from "./list/StatisticsItem";
 import MemoriesItem from "./list/MemoriesItem";

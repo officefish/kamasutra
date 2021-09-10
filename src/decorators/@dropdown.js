@@ -6,7 +6,7 @@ let mapStateToProps = (state) =>
 {
     return {
         /** Preloading status */
-        dropdowns: state.ux2.dropdowns,
+        dropdowns: state.ux.dropdown.dropdowns,
     }
 }
 
@@ -66,6 +66,7 @@ export const dropdownComponent = (label, ref) => (WrappedComponent) => {
                 document.removeEventListener("click", this.handleClickOutside);
                 return <></>;
             }
+
         }
     }
     return connect(mapStateToProps, mapDispatchToProps)(Decorator)

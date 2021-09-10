@@ -5,11 +5,7 @@ import MinimalistPagination from "../../ui/pagination/MinimalistPagination";
 @withGlobalPreloader('isFetching')
 class CommunityListPage extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
-    render () {
+   render () {
         return <div>
                     <div>{this.props.members}</div>
                     <MinimalistPagination
@@ -18,6 +14,6 @@ class CommunityListPage extends React.Component {
                         onInputPreview={this.props.possiblePageInput}
                     />
                 </div>
-    }
+  }
 }
 export default CommunityListPage

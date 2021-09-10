@@ -8,7 +8,7 @@ class StackPreloader extends React.Component {
     render () {
         return <>
             { this.props.isGlobalPreloader
-                ? <img src={preloader} />
+                ? <img src={preloader} alt='stack preloader'/>
                 : <div>{this.props.content}</div>
             }
         </>

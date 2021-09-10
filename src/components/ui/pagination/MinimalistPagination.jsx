@@ -1,4 +1,3 @@
-import * as Validator from 'validatorjs';
 import React from "react";
 
 class MinimalistPagination extends React.Component {

@@ -8,7 +8,7 @@ let initialState =
     isGlobalPreloader:false
 }
 
-const uxReducer = (state = initialState, action) => {
+const preloadReducer = (state = initialState, action) => {
 
     switch (action.type) {
         /** Change document title */
@@ -19,6 +19,6 @@ const uxReducer = (state = initialState, action) => {
         default: return state
     }
 }
-export default uxReducer
+export default preloadReducer
 
 export const ToggleGlobalPreloaderAC = isGlobalPreloader => { return { type:TOGGLE_GLOBAL_PRELOAD, isGlobalPreloader } }

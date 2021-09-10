@@ -5,10 +5,6 @@ import UserDropdownInfo from "./UserDropdownInfo";
 
 class ConnectItem extends React.Component {
 
-    constructor(props) {
-       super(props);
-    }
-
     render () {
         return <StyledConnectItem href='#' >
             <UserDropdownIcon />

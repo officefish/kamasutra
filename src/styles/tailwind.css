@@ -42,7 +42,7 @@ h1 {
   margin: 0.67em 0;
 }
 
-/* Grouping connect
+/* Grouping content
    ========================================================================== */
 
 /**
@@ -139,7 +139,7 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded connect
+/* Embedded content
    ========================================================================== */
 
 /**
@@ -423,8 +423,8 @@ html {
  *
  *    We used to set this in the html element and inherit from
  *    the parent element for everything else. This caused issues
- *    in shadow-dom-enhanced elements like <details> where the connect
- *    is wrapped by a div with box-sizing set to `connect-box`.
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
  *
  *    https://github.com/mozdevs/cssremedy/issues/4
  *
@@ -1819,7 +1819,7 @@ video {
 }
 
 .bg-clip-content {
-  background-clip: connect-box;
+  background-clip: content-box;
 }
 
 .bg-clip-text {
@@ -10054,7 +10054,7 @@ video {
 }
 
 .box-content {
-  box-sizing: connect-box;
+  box-sizing: content-box;
 }
 
 .cursor-auto {
@@ -19523,13 +19523,13 @@ video {
 }
 
 .auto-cols-min {
-  grid-auto-columns: -webkit-min-connect;
-  grid-auto-columns: min-connect;
+  grid-auto-columns: -webkit-min-content;
+  grid-auto-columns: min-content;
 }
 
 .auto-cols-max {
-  grid-auto-columns: -webkit-max-connect;
-  grid-auto-columns: max-connect;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
 }
 
 .auto-cols-fr {
@@ -19737,13 +19737,13 @@ video {
 }
 
 .auto-rows-min {
-  grid-auto-rows: -webkit-min-connect;
-  grid-auto-rows: min-connect;
+  grid-auto-rows: -webkit-min-content;
+  grid-auto-rows: min-content;
 }
 
 .auto-rows-max {
-  grid-auto-rows: -webkit-max-connect;
-  grid-auto-rows: max-connect;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
 }
 
 .auto-rows-fr {
@@ -23132,7 +23132,7 @@ video {
   }
 
   .sm\:bg-clip-content {
-    background-clip: connect-box;
+    background-clip: content-box;
   }
 
   .sm\:bg-clip-text {
@@ -31367,7 +31367,7 @@ video {
   }
 
   .sm\:box-content {
-    box-sizing: connect-box;
+    box-sizing: content-box;
   }
 
   .sm\:cursor-auto {
@@ -40836,13 +40836,13 @@ video {
   }
 
   .sm\:auto-cols-min {
-    grid-auto-columns: -webkit-min-connect;
-    grid-auto-columns: min-connect;
+    grid-auto-columns: -webkit-min-content;
+    grid-auto-columns: min-content;
   }
 
   .sm\:auto-cols-max {
-    grid-auto-columns: -webkit-max-connect;
-    grid-auto-columns: max-connect;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
   }
 
   .sm\:auto-cols-fr {
@@ -41050,13 +41050,13 @@ video {
   }
 
   .sm\:auto-rows-min {
-    grid-auto-rows: -webkit-min-connect;
-    grid-auto-rows: min-connect;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
   }
 
   .sm\:auto-rows-max {
-    grid-auto-rows: -webkit-max-connect;
-    grid-auto-rows: max-connect;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
   }
 
   .sm\:auto-rows-fr {
@@ -44415,7 +44415,7 @@ video {
   }
 
   .md\:bg-clip-content {
-    background-clip: connect-box;
+    background-clip: content-box;
   }
 
   .md\:bg-clip-text {
@@ -52650,7 +52650,7 @@ video {
   }
 
   .md\:box-content {
-    box-sizing: connect-box;
+    box-sizing: content-box;
   }
 
   .md\:cursor-auto {
@@ -62119,13 +62119,13 @@ video {
   }
 
   .md\:auto-cols-min {
-    grid-auto-columns: -webkit-min-connect;
-    grid-auto-columns: min-connect;
+    grid-auto-columns: -webkit-min-content;
+    grid-auto-columns: min-content;
   }
 
   .md\:auto-cols-max {
-    grid-auto-columns: -webkit-max-connect;
-    grid-auto-columns: max-connect;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
   }
 
   .md\:auto-cols-fr {
@@ -62333,13 +62333,13 @@ video {
   }
 
   .md\:auto-rows-min {
-    grid-auto-rows: -webkit-min-connect;
-    grid-auto-rows: min-connect;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
   }
 
   .md\:auto-rows-max {
-    grid-auto-rows: -webkit-max-connect;
-    grid-auto-rows: max-connect;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
   }
 
   .md\:auto-rows-fr {
@@ -65698,7 +65698,7 @@ video {
   }
 
   .lg\:bg-clip-content {
-    background-clip: connect-box;
+    background-clip: content-box;
   }
 
   .lg\:bg-clip-text {
@@ -73933,7 +73933,7 @@ video {
   }
 
   .lg\:box-content {
-    box-sizing: connect-box;
+    box-sizing: content-box;
   }
 
   .lg\:cursor-auto {
@@ -83402,13 +83402,13 @@ video {
   }
 
   .lg\:auto-cols-min {
-    grid-auto-columns: -webkit-min-connect;
-    grid-auto-columns: min-connect;
+    grid-auto-columns: -webkit-min-content;
+    grid-auto-columns: min-content;
   }
 
   .lg\:auto-cols-max {
-    grid-auto-columns: -webkit-max-connect;
-    grid-auto-columns: max-connect;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
   }
 
   .lg\:auto-cols-fr {
@@ -83616,13 +83616,13 @@ video {
   }
 
   .lg\:auto-rows-min {
-    grid-auto-rows: -webkit-min-connect;
-    grid-auto-rows: min-connect;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
   }
 
   .lg\:auto-rows-max {
-    grid-auto-rows: -webkit-max-connect;
-    grid-auto-rows: max-connect;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
   }
 
   .lg\:auto-rows-fr {
@@ -86981,7 +86981,7 @@ video {
   }
 
   .xl\:bg-clip-content {
-    background-clip: connect-box;
+    background-clip: content-box;
   }
 
   .xl\:bg-clip-text {
@@ -95216,7 +95216,7 @@ video {
   }
 
   .xl\:box-content {
-    box-sizing: connect-box;
+    box-sizing: content-box;
   }
 
   .xl\:cursor-auto {
@@ -104685,13 +104685,13 @@ video {
   }
 
   .xl\:auto-cols-min {
-    grid-auto-columns: -webkit-min-connect;
-    grid-auto-columns: min-connect;
+    grid-auto-columns: -webkit-min-content;
+    grid-auto-columns: min-content;
   }
 
   .xl\:auto-cols-max {
-    grid-auto-columns: -webkit-max-connect;
-    grid-auto-columns: max-connect;
+    grid-auto-columns: -webkit-max-content;
+    grid-auto-columns: max-content;
   }
 
   .xl\:auto-cols-fr {
@@ -104899,13 +104899,13 @@ video {
   }
 
   .xl\:auto-rows-min {
-    grid-auto-rows: -webkit-min-connect;
-    grid-auto-rows: min-connect;
+    grid-auto-rows: -webkit-min-content;
+    grid-auto-rows: min-content;
   }
 
   .xl\:auto-rows-max {
-    grid-auto-rows: -webkit-max-connect;
-    grid-auto-rows: max-connect;
+    grid-auto-rows: -webkit-max-content;
+    grid-auto-rows: max-content;
   }
 
   .xl\:auto-rows-fr {

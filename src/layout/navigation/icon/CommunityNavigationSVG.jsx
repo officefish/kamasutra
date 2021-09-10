@@ -1,9 +1,9 @@
 import {NavigationIconLiner} from "./navigationIconLiner";
 import {StyledNavigationSVG} from "./styledNavigationSVG";
 
-export const CommunityNavigationSVG = () => {
+export const CommunityNavigationSVG = (props) => {
     return <NavigationIconLiner>
-        <StyledNavigationSVG
+        <StyledNavigationSVG $hover={props.$hover}
         xmlns="http://www.w3.org/2000/svg"  fill="none" viewBox="0 0 24 24"
              stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"

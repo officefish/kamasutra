@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   `
 
+
 /*
 styled.div.attrs({
   className: "w-full h-screen bg-gray-100 p-2"

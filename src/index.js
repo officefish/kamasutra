@@ -1,4 +1,4 @@
-//import './styles/index.css';
+import './index.css'
 import reportWebVitals from './reportWebVitals';
 import store from "./redux/reduxStore"
 

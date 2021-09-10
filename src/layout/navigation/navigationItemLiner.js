@@ -7,6 +7,6 @@ export const NavigationItemLiner = tw.div`
     hover:bg-gray-200
     items-center
     rounded
-    group
+    cursor:pointer
     `
 

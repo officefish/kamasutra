@@ -1,21 +1,25 @@
 
-import { createStore, combineReducers } from 'redux'
+import { combineReducers } from 'redux'
+import { createStore } from 'redux-magic-reducer'
 
 import profileReducer from './connect/profileReducer';
 import messengerReducer from './connect/messengerReducer';
 import communityReducer from './connect/communityReducer';
 import titleReducer from "./ux/titleReducer";
-import uxReducer from "./ux/uxReducer";
+import preloadReducer from "./ux/preloadReducer";
 import dropdownReducer from "./ux/dropdownReducer";
+import hoverReducer from "./ux/hoverReducer";
 
-let reducers = combineReducers ({
+
+const uxReducer = combineReducers({preload:preloadReducer, dropdown:dropdownReducer, hover:hoverReducer})
+
+const reducers = {
     profile:profileReducer,
     messenger:messengerReducer,
     community:communityReducer,
     document:titleReducer,
-    ux:uxReducer,
-    ux2:dropdownReducer
-})
+    ux:uxReducer
+}
 
 let store = createStore(reducers)
 export default store

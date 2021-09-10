@@ -6,15 +6,17 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^13.2.1",
+    "axios": "^0.21.1",
     "craco": "^0.0.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "react-router-dom": "^4.3.1",
-    "react-redux": "^7.0.3",
-    "redux": "^4.0.1",
-    "axios": "^0.21.1",
     "react-axios": "^2.0.5",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.0.3",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.1",
+    "redux-magic-reducer": "^1.0.0",
+    "uuid": "^8.3.2",
     "validatorjs": "^3.22.1",
     "web-vitals": "^1.0.1"
   },
@@ -45,15 +47,15 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^9.7.5",
-    "postcss": "postcss@^7",
-    "postcss-cli": "^7.1.0",
-    "tailwind-styled-components": "^2.0.3",
-    "styled-components": "^5.3.1",
-    "tailwindcss": "^1.8.10",
     "@babel/core": "^7.15.0",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/plugin-proposal-decorators": "^7.14.5",
-    "@babel/plugin-proposal-do-expressions": "^7.14.5"
+    "@babel/plugin-proposal-do-expressions": "^7.14.5",
+    "autoprefixer": "^9.7.5",
+    "postcss": "postcss@^7",
+    "postcss-cli": "^7.1.0",
+    "styled-components": "^5.3.1",
+    "tailwind-styled-components": "^2.0.3",
+    "tailwindcss": "^1.8.10"
   }
 }

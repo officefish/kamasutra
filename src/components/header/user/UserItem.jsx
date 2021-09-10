@@ -9,10 +9,6 @@ import {withDropdown} from "../../../decorators/@dropdown";
 @withDropdown('headerDropdown')
 class UserItem extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render () {
         return <StyledRightSideItems onClick={this.props.dropdownOn}>
             <HeaderUserName />

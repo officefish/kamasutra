@@ -5,9 +5,7 @@ const SELECT_PAGE = "SELECT_PAGE"
 const TOGGLE_IS_FETCHING = "TOGGLE_IS_FETCHING"
 const POSSIBLE_PAGE_INPUT = "POSSIBLE_PAGE_INPUT"
 
-const imgSource = 'https://rick-i-morty.online/wp-content/uploads/2007/10/Rick_and_Morty_season_4.png'
-
-let initialState = 
+let initialState =
 {
   users:[],
   currentPage:1,

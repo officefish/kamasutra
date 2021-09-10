@@ -6,6 +6,7 @@ export {GlobalNavigation} from "./global/globalNavigation"
 export {GlobalContent} from "./global/globalContent"
 export {GlobalContainer} from './global/globalContainer'
 export {GlobalDisplay} from './global/globalDisplay'
+export {GlobalGrid} from './global/globalGrid'
 
 export {LeftColumn} from './global/columns/leftColumn'
 export {CenterColumn} from './global/columns/centerColumn'

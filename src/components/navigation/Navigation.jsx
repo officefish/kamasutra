@@ -7,7 +7,6 @@ import NewsItem from "./items/NewsItem";
 import MessengerItem from "./items/MessengerItem";
 import CommunityItem from "./items/CommunityItem";
 import GamesItem from "./items/GamesItem";
-import {NavLink} from "react-router-dom";
 import AdvancedNavigation from "./advanced/AdvancedNavigation";
 
 const Navigation = () => {

@@ -1,17 +1,46 @@
+import React from "react";
 import {NavLink} from "react-router-dom";
-import {NavigationItemLiner} from "../../../layout/navigation/navigationItemLiner";
-import {ProfileNavigationSVG} from "../../../layout/navigation/icon/ProfileNavigationSVG";
-import {NavigationItemLabel} from "../../../layout/navigation/navigationItemLabel";
-import {NavigationListItem} from "../../../layout/navigation/navigationListItem";
+import {
+    NavigationItemLiner,
+    NavigationItemLabel,
+    NavigationListItem,
+    ProfileNavigationSVG
+} from "../../../layout/layout";
+import withHover from "../../../decorators/@withHover";
 
-const MyPageItem = () => <NavigationListItem>
-    <NavLink to="/profile">
-        <NavigationItemLiner>
-            <ProfileNavigationSVG />
-            <NavigationItemLabel>
-                Моя страница
-            </NavigationItemLabel>
-        </NavigationItemLiner>
-    </NavLink>
-</NavigationListItem>
+@withHover
+class MyPageItem extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.onMouseEnterHandler = this.onMouseEnterHandler.bind(this)
+        this.onMouseLeaveHandler = this.onMouseLeaveHandler.bind(this)
+    }
+
+    onMouseEnterHandler () {
+        const {toggleHover} = this.props
+        toggleHover && toggleHover(true)
+    }
+
+    onMouseLeaveHandler () {
+        const {toggleHover} = this.props
+        toggleHover && toggleHover(false)
+    }
+
+    render() {
+        return <NavigationListItem
+            onMouseEnter={this.onMouseEnterHandler}
+            onMouseLeave={this.onMouseLeaveHandler}
+        >
+           <NavLink to="/profile">
+               <NavigationItemLiner>
+                   <ProfileNavigationSVG $hover={this.props.isHover}/>
+                   <NavigationItemLabel $hover={this.props.isHover}>
+                       Моя страница
+                   </NavigationItemLabel>
+               </NavigationItemLiner>
+           </NavLink>
+       </NavigationListItem>
+   }
+}
 export default MyPageItem

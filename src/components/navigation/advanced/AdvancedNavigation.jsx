@@ -1,5 +1,4 @@
-import {NavLink} from "react-router-dom";
-import {StyledAdvancedNavigation, StyledAdvancedNavigationItem,} from "../../../layout/layout";
+import {StyledAdvancedNavigation} from "../../../layout/layout";
 import BlogItem from "./items/BlogItem";
 import DevelopersItem from "./items/DevelopersItem";
 import AdvertisingItem from "./items/AdvertisingItem";

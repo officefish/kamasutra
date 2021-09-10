@@ -19,7 +19,7 @@ let Member = (props) => {
 
     return <div>
         <span>
-            <img src={imgSrc} />
+            <img src={imgSrc} alt=''/>
             {
                 followed 
                 ? <button onClick={onUnfollow}>unfollow</button> 

@@ -1,4 +1,3 @@
-import {StyledSideItems} from "./styledSideItems";
 import tw from "tailwind-styled-components";
 
 /** Div which contains Logo svg */

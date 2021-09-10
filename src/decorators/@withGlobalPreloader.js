@@ -1,5 +1,5 @@
 /** Show global preloader when user waiting some data or connect generation passes */
-import {ToggleGlobalPreloaderAC} from "../redux/ux/uxReducer";
+import {ToggleGlobalPreloaderAC} from "../redux/ux/preloadReducer";
 import React from "react";
 import {connect} from "react-redux";
 import StackPreloader from "../components/ui/StackPreloader";
@@ -9,7 +9,7 @@ let mapStateToProps = (state) =>
 {
     return {
         /** Preloading status */
-        isGlobalPreloader: state.ux.isGlobalPreloader,
+        isGlobalPreloader: state.ux.preload.isGlobalPreloader,
     }
 }
 

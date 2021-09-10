@@ -1,5 +1,4 @@
 import {StyledAvatarImg} from "../../../layout/layout";
-import {NavLink} from "react-router-dom";
 import RemoveAvatarItem from "./edit/RemoveAvatarItem";
 import EditAvatarList from "./edit/EditAvatarList";
 
