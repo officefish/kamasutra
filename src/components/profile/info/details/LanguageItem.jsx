@@ -5,12 +5,12 @@ import {
     StyledIntroCol_2_Liner
 } from "../../../../layout/layout";
 
-const CityItem = props => {
+const LanguageItem = props => {
     return <StyledIntroItemGrid>
         <StyledIntroItemLabel>{props.title}:</StyledIntroItemLabel>
         <StyledIntroCol_2_Liner>
-            <StyledIntroItemNavLink to='./profile'>{props.city}</StyledIntroItemNavLink>
+            <StyledIntroItemNavLink to='./profile'>{props.language}</StyledIntroItemNavLink>
         </StyledIntroCol_2_Liner>
     </StyledIntroItemGrid>
 }
-export default CityItem
+export default LanguageItem

@@ -128,3 +128,12 @@ export {StyledIntroCol_1_Liner} from './profile/info/intro/styledIntroCol_1_Line
 export {StyledIntroCol_2_Liner} from './profile/info/intro/styledIntroCol_2_Liner'
 export {StyledIntroItemNavLink} from './profile/info/intro/styledIntroItemNavLink'
 export {StyledInfoDetailsBtn} from './profile/info/details/styledInfoDetailsBtn'
+
+/** Info section Details */
+export {StyledDetailsSection} from './profile/info/details/styledDetailsSection'
+export {StyledDetailsSectionHeader} from './profile/info/details/styledDetailsSectionHeader'
+export {StyledDetailsSectionLiner} from './profile/info/details/styledDetailsSectionLiner'
+export {StyledDetailsSectionSpacerLiner} from './profile/info/details/styledDetailsSectionSpacerLiner'
+export {StyledDetailsSectionSpacer}  from './profile/info/details/styledDetailsSectionSpacer'
+export {StyledEditDetailsSectionBtn} from './profile/info/details/styledEditDetailsSectionBtn'
+export {StyledEditDetailsSectionNavLink} from './profile/info/details/styledEditDetailsSectionNavLink'
