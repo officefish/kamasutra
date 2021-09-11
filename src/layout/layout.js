@@ -137,3 +137,4 @@ export {StyledDetailsSectionSpacerLiner} from './profile/info/details/styledDeta
 export {StyledDetailsSectionSpacer}  from './profile/info/details/styledDetailsSectionSpacer'
 export {StyledEditDetailsSectionBtn} from './profile/info/details/styledEditDetailsSectionBtn'
 export {StyledEditDetailsSectionNavLink} from './profile/info/details/styledEditDetailsSectionNavLink'
+export {StyledIntroItemSpan} from './profile/info/details/styledIntroItemSpan'

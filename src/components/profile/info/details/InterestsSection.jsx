@@ -23,7 +23,7 @@ const InterestsSection = () => {
         <InfoItem title='Любимая книга' value='Одинокий Волк' navLink='/profile' />
         <InfoItem title='Любимый фильм' value='Облачный атлас' navLink='/profile' />
         <InfoItem title='Любимое дело' value='программирование' navLink='/profile' />
-        <InfoItem title='Любимая цитата' value='Моей посуду, думай о посуде' navLink='/profile' />
+        <InfoItem title='Любимая цитата' value='Моешь посуду, думай о посуде' />
     </StyledDetailsSection>
 }
 export default InterestsSection
