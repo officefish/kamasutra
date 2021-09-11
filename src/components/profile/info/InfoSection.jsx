@@ -9,6 +9,9 @@ import CityItem from "./introduction/CityItem";
 import MarriedItem from "./introduction/MarriedItem";
 import DetailsButton from "./details/DetailsButton";
 import BaseInfoSection from "./details/BaseInfoSection";
+import EducationSection from "./details/EducationSection";
+import ValuesSection from "./details/ValuesSection";
+import InterestsSection from "./details/InterestsSection";
 
 const InfoSection = () =>
     <StyledRightColumnSection>
@@ -21,9 +24,10 @@ const InfoSection = () =>
             <DetailsButton />
             <div>
                <BaseInfoSection />
-               <BaseInfoSection />
+               <EducationSection />
+               <ValuesSection />
+               <InterestsSection />
             </div>
-
         </StyledColumnSectionLiner>
     </StyledRightColumnSection>
 export default InfoSection

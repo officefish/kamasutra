@@ -1,16 +1,6 @@
-import {
-    StyledIntroItemGrid,
-    StyledIntroItemLabel,
-    StyledIntroItemNavLink,
-    StyledIntroCol_2_Liner
-} from "../../../../layout/layout";
+import InfoItem from "../InfoItem";
 
 const CityItem = props => {
-    return <StyledIntroItemGrid>
-        <StyledIntroItemLabel>{props.title}:</StyledIntroItemLabel>
-        <StyledIntroCol_2_Liner>
-            <StyledIntroItemNavLink to='./profile'>{props.city}</StyledIntroItemNavLink>
-        </StyledIntroCol_2_Liner>
-    </StyledIntroItemGrid>
+    return <InfoItem navLink='/profile' title={props.title} value={props.city} />
 }
 export default CityItem
