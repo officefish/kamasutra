@@ -1,29 +1,17 @@
-import {
-    StyledDetailsSection,
-    StyledDetailsSectionHeader,
-    StyledDetailsSectionLiner,
-    StyledDetailsSectionSpacer,
-    StyledDetailsSectionSpacerLiner,
-    StyledEditDetailsSectionBtn,
-    StyledEditDetailsSectionNavLink
-} from "../../../../layout/layout";
-import InfoItem from "../InfoItem";
+
+import DetailsSection from "./DetailsSection";
 
 const ValuesSection = () => {
-    return <StyledDetailsSection>
-        <StyledDetailsSectionLiner>
-            <StyledDetailsSectionHeader>Убеждения</StyledDetailsSectionHeader>
-            <StyledDetailsSectionSpacerLiner>
-                <StyledDetailsSectionSpacer/>
-            </StyledDetailsSectionSpacerLiner>
-            <StyledEditDetailsSectionBtn>
-                <StyledEditDetailsSectionNavLink to='/profile'>Корректировать</StyledEditDetailsSectionNavLink>
-            </StyledEditDetailsSectionBtn>
-        </StyledDetailsSectionLiner>
-        <InfoItem title='Полит.взгляды' value='Либертарианские' navLink='/profile' />
-        <InfoItem title='Главное в жизни' value='Холодный расчет' navLink='/profile' />
-        <InfoItem title='Главное в людях' value='Горячие сердца' navLink='/profile' />
-        <InfoItem title='Вдохновляет' value='Естествознание' navLink='/profile' />
-    </StyledDetailsSection>
+    const sectionProps = {}
+    sectionProps.navLink = './profile'
+    sectionProps.title = 'Убеждения'
+    sectionProps.items = [
+        {title:'Полит.взгляды', value:'Либертарианские', navLink:'/profile' },
+        {title:'Главное в жизни', value:'Холодный расчет', navLink:'/profile' },
+        {title:'Главное в людях', value:'Горячие сердца', navLink:'/profile' },
+        {title:'Вдохновляет', value:'Естествознание', navLink:'/profile'}
+    ]
+
+    return <DetailsSection {...sectionProps}/>
 }
 export default ValuesSection

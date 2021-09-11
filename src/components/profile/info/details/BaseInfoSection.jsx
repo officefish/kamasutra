@@ -1,28 +1,16 @@
-import CityItem from "../introduction/CityItem";
-import LanguageItem from "./LanguageItem";
-import {
-    StyledDetailsSection,
-    StyledDetailsSectionHeader,
-    StyledDetailsSectionLiner,
-    StyledDetailsSectionSpacer,
-    StyledDetailsSectionSpacerLiner,
-    StyledEditDetailsSectionBtn,
-    StyledEditDetailsSectionNavLink
-} from "../../../../layout/layout";
+import DetailsSection from "./DetailsSection";
 
 const BaseInfoSection = () => {
-    return <StyledDetailsSection>
-        <StyledDetailsSectionLiner>
-            <StyledDetailsSectionHeader>Основная информация</StyledDetailsSectionHeader>
-            <StyledDetailsSectionSpacerLiner>
-                <StyledDetailsSectionSpacer/>
-            </StyledDetailsSectionSpacerLiner>
-            <StyledEditDetailsSectionBtn>
-                <StyledEditDetailsSectionNavLink to='/profile'>Корректировать</StyledEditDetailsSectionNavLink>
-            </StyledEditDetailsSectionBtn>
-        </StyledDetailsSectionLiner>
-        <CityItem title='Родной город' city='Санкт-Петербург' />
-        <LanguageItem title='Язык' language='русский' />
-    </StyledDetailsSection>
+    
+    const sectionProps = {}
+    sectionProps.navLink = './profile'
+    sectionProps.title = 'Образование'
+    sectionProps.items = [
+        {title:'Родной город', value:'Санкт-Петербург', navLink:'/profile' },
+        {title:'Язык', value:'русский', navLink:'/profile' }
+    ]
+
+    return <DetailsSection {...sectionProps}/>
+
 }
 export default BaseInfoSection

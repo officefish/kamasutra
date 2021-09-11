@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
 /**  */
-export const StyledIntroCol_2_Liner = tw.div`
+export const StyledIntroCoTwoLiner = tw.div`
     col-span-2
     `

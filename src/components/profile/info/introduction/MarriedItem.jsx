@@ -2,15 +2,15 @@ import {
     StyledIntroItemGrid,
     StyledIntroItemLabel,
     StyledIntroItemNavLink,
-    StyledIntroCol_2_Liner
+    StyledIntroCoTwoLiner
 } from "../../../../layout/layout";
 
 const MarriedItem = props => {
     return <StyledIntroItemGrid>
         <StyledIntroItemLabel>Личные отношения:</StyledIntroItemLabel>
-        <StyledIntroCol_2_Liner>
+        <StyledIntroCoTwoLiner>
             <StyledIntroItemNavLink to='./profile'>{props.isMarried ? 'женат' : 'не женат'}</StyledIntroItemNavLink>
-        </StyledIntroCol_2_Liner>
+        </StyledIntroCoTwoLiner>
     </StyledIntroItemGrid>
 }
 export default MarriedItem

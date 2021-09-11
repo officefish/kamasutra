@@ -124,8 +124,8 @@ export {StyledInfoSpacer} from './profile/info/intro/styledInfoSpacer'
 
 export {StyledIntroItemGrid} from './profile/info/intro/styledIntroItemGrid'
 export {StyledIntroItemLabel} from './profile/info/intro/styledIntroItemLabel'
-export {StyledIntroCol_1_Liner} from './profile/info/intro/styledIntroCol_1_Liner'
-export {StyledIntroCol_2_Liner} from './profile/info/intro/styledIntroCol_2_Liner'
+export {StyledIntroColOneLiner} from './profile/info/intro/styledIntroColOneLiner'
+export {StyledIntroCoTwoLiner} from './profile/info/intro/styledIntroCoTwoLiner'
 export {StyledIntroItemNavLink} from './profile/info/intro/styledIntroItemNavLink'
 export {StyledInfoDetailsBtn} from './profile/info/details/styledInfoDetailsBtn'
 

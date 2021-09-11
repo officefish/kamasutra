@@ -1,11 +1,10 @@
 import {StyledIntroItemGrid} from "../../../layout/profile/info/intro/styledIntroItemGrid";
 import {StyledIntroItemLabel} from "../../../layout/profile/info/intro/styledIntroItemLabel";
-import {StyledIntroCol_2_Liner} from "../../../layout/profile/info/intro/styledIntroCol_2_Liner";
+import {StyledIntroCoTwoLiner} from "../../../layout/profile/info/intro/styledIntroCoTwoLiner";
 import {StyledIntroItemNavLink} from "../../../layout/profile/info/intro/styledIntroItemNavLink";
 import {StyledIntroItemSpan} from "../../../layout/layout";
 
 const InfoItem = props => {
-
     let details;
     if (props.navLink) {
         details = <StyledIntroItemNavLink to={props.navLink}>{props.value}</StyledIntroItemNavLink>;
@@ -15,9 +14,9 @@ const InfoItem = props => {
 
     return <StyledIntroItemGrid>
         <StyledIntroItemLabel>{props.title}:</StyledIntroItemLabel>
-        <StyledIntroCol_2_Liner>
+        <StyledIntroCoTwoLiner>
             {details}
-        </StyledIntroCol_2_Liner>
+        </StyledIntroCoTwoLiner>
     </StyledIntroItemGrid>
 }
 export default InfoItem

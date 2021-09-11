@@ -1,27 +1,14 @@
-import {
-    StyledDetailsSection,
-    StyledDetailsSectionHeader,
-    StyledDetailsSectionLiner,
-    StyledDetailsSectionSpacer,
-    StyledDetailsSectionSpacerLiner,
-    StyledEditDetailsSectionBtn,
-    StyledEditDetailsSectionNavLink
-} from "../../../../layout/layout";
-import InfoItem from "../InfoItem";
+import DetailsSection from "./DetailsSection";
 
 const EducationSection = () => {
-    return <StyledDetailsSection>
-        <StyledDetailsSectionLiner>
-            <StyledDetailsSectionHeader>Образование</StyledDetailsSectionHeader>
-            <StyledDetailsSectionSpacerLiner>
-                <StyledDetailsSectionSpacer/>
-            </StyledDetailsSectionSpacerLiner>
-            <StyledEditDetailsSectionBtn>
-                <StyledEditDetailsSectionNavLink to='/profile'>Корректировать</StyledEditDetailsSectionNavLink>
-            </StyledEditDetailsSectionBtn>
-        </StyledDetailsSectionLiner>
-        <InfoItem title='Университет' value='СПбГИК' navLink='/profile' />
-        <InfoItem title='Факультет' value='Режиссуры и продюсерского мастерства' navLink='/profile' />
-    </StyledDetailsSection>
+    const sectionProps = {}
+    sectionProps.navLink = './profile'
+    sectionProps.title = 'Образование'
+    sectionProps.items = [
+        {title:'Университет', value:'СПбГИК', navLink:'/profile' },
+        {title:'Факультет', value:'Режиссуры и продюсерского мастерства', navLink:'/profile' }
+    ]
+
+    return <DetailsSection {...sectionProps}/>
 }
 export default EducationSection

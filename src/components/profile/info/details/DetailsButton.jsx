@@ -1,15 +1,15 @@
 import {
     StyledIntroItemGrid,
-    StyledIntroCol_2_Liner,
+    StyledIntroCoTwoLiner,
     StyledInfoDetailsBtn,
-    StyledIntroCol_1_Liner
+    StyledIntroColOneLiner
 } from "../../../../layout/layout";
 
 const DetailsButton = () => {
     return <StyledInfoDetailsBtn>
         <StyledIntroItemGrid>
-            <StyledIntroCol_1_Liner />
-            <StyledIntroCol_2_Liner>Подробная информация</StyledIntroCol_2_Liner>
+            <StyledIntroColOneLiner />
+            <StyledIntroCoTwoLiner>Подробная информация</StyledIntroCoTwoLiner>
         </StyledIntroItemGrid>
     </StyledInfoDetailsBtn>
 }
