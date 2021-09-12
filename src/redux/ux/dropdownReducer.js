@@ -1,28 +1,34 @@
 /** Reducer which service dropdowns  */
-
 const TOGGLE_DROPDOWN = 'TOGGLE_DROPDOWN'
+const REGISTER_DROPDOWN = "REGISTER_HOVER"
 
-let initialState =
-    {
-        dropdowns:[
-            { isOpen: false, label: "headerDropdown" },
-            { isOpen: false, label: "advancedDropdown" }
-        ]
-    }
+export const ToggleDropdownAC = (isDropdown, key) => { return { type:TOGGLE_DROPDOWN, isDropdown, key } }
+export const RegisterDropdownAC = key => { return {type:REGISTER_DROPDOWN, key} }
 
-const dropdownReducer = (state = initialState, action) => {
+const dropdownReducer = (state = {dropdowns:[]}, action) => {
 
     switch (action.type) {
+
+        case REGISTER_DROPDOWN:
+            const dropdown = {key:action.key, isDropdown:false}
+            return {
+                ...state,
+                dropdowns:[ ...state.dropdowns, dropdown]
+            }
+
         /** Handle ToggleDropdown */
         case TOGGLE_DROPDOWN: {
 
-            let currentDropdown = state.dropdowns.find(dropdown => dropdown.label === action.label)
-            currentDropdown.isOpen = action.isOpen
-
             return {
                 ...state,
-                /** Copy dropdowns */
-                dropdowns:[...state.dropdowns]
+                dropdowns:  state.dropdowns.map( dropdown =>
+                    {
+                        return dropdown.key === action.key
+                            ? {...dropdown, isDropdown:action.isDropdown }
+                            : dropdown
+                    }
+                ),
+
             }
         }
         default: return state
@@ -30,4 +36,3 @@ const dropdownReducer = (state = initialState, action) => {
 }
 export default dropdownReducer
 
-export const ToggleDropdownAC = (isOpen, label) => { return { type:TOGGLE_DROPDOWN, isOpen, label } }

@@ -8,7 +8,6 @@ const EducationSection = () => {
         {title:'Университет', value:'СПбГИК', navLink:'/profile' },
         {title:'Факультет', value:'Режиссуры и продюсерского мастерства', navLink:'/profile' }
     ]
-
     return <DetailsSection {...sectionProps}/>
 }
 export default EducationSection

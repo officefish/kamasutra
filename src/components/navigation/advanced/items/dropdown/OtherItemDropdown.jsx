@@ -5,12 +5,12 @@ import {
     StyledAdvancedDropdownList,
     StyledAdvancedDropdownListItem, StyledCornerDetail
 } from "../../../../../layout/layout";
-import {dropdownComponent} from "../../../../../decorators/@dropdown";
+import {dropdownComponentWithOutsideHandler} from "../../../../../decorators/@withDropdown";
 
 /** Reference to dropdown absolute container*/
-const dropdownRootRef = React.createRef(null)
+const dropdownRootRef = React.createRef()
 
-@dropdownComponent('advancedDropdown', dropdownRootRef)
+@dropdownComponentWithOutsideHandler (dropdownRootRef)
 class OtherItemDropdown extends React.Component {
     render () {
         return  <StyledAdvancedDropdownLiner ref={dropdownRootRef}>

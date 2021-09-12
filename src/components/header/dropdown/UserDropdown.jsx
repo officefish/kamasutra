@@ -5,12 +5,12 @@ import ConnectItem from "./connect/ConnectItem";
 import SettingsItem from "./settings/SettingsItem";
 import HelpItem from "./help/HelpItem";
 import LogoutItem from "./logout/LogoutItem";
-import {dropdownComponent} from "../../../decorators/@dropdown";
+import {dropdownComponentWithOutsideHandler} from "../../../decorators/@withDropdown";
 
 /** Reference to dropdown absolute container*/
-const dropdownRootRef = React.createRef(null)
+const dropdownRootRef = React.createRef()
 
-@dropdownComponent('headerDropdown', dropdownRootRef)
+@dropdownComponentWithOutsideHandler(dropdownRootRef)
 class UserDropdown extends React.Component {
 
     render () {

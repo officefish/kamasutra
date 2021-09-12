@@ -47,7 +47,11 @@ export const withHover = WrappedComponent => {
             const hover = this.props.hovers.find((hover) => {return hover.key === this.randomKey})
             const isHover =  hover ? hover.isHover : false
 
-            return <WrappedComponent {...this.props} isHover={isHover} toggleHover={this.toggleHoverHandler} />
+            /** Remove hovers list property for wrappedComponent */
+            let propsClone = Object.assign({}, this.props);
+            delete propsClone.hovers;
+
+            return <WrappedComponent {...propsClone} isHover={isHover} toggleHover={this.toggleHoverHandler} />
         }
     }
 

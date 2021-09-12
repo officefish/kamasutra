@@ -1,7 +1,7 @@
 import DetailsSection from "./DetailsSection";
 
 const BaseInfoSection = () => {
-    
+
     const sectionProps = {}
     sectionProps.navLink = './profile'
     sectionProps.title = 'Образование'

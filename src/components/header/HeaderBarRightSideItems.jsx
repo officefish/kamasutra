@@ -6,10 +6,7 @@ import UserDropdown from  "./dropdown/UserDropdown"
 class HeaderBarRightSideItems extends React.Component {
 
     render () {
-        return <UserDropdownParent>
-           <UserItem />
-           <UserDropdown />
-        </UserDropdownParent>
+        return <UserItem />
     }
 }
 export default HeaderBarRightSideItems
