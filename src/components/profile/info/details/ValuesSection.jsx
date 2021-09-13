@@ -1,4 +1,3 @@
-
 import DetailsSection from "./DetailsSection";
 
 const ValuesSection = () => {

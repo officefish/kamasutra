@@ -27,9 +27,6 @@ const mapDispatchToProps = dispatch =>
     }
 }
 
-
-
-
 export const withDropdown = WrappedComponent => {
 
     class Decorator extends React.Component {

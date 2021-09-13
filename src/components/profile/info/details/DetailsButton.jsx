@@ -5,11 +5,11 @@ import {
     StyledIntroColOneLiner
 } from "../../../../layout/layout";
 
-const DetailsButton = () => {
-    return <StyledInfoDetailsBtn>
+const DetailsButton = props => {
+    return <StyledInfoDetailsBtn onClick={props.onClick}>
         <StyledIntroItemGrid>
             <StyledIntroColOneLiner />
-            <StyledIntroCoTwoLiner>Подробная информация</StyledIntroCoTwoLiner>
+            <StyledIntroCoTwoLiner>{props.value}</StyledIntroCoTwoLiner>
         </StyledIntroItemGrid>
     </StyledInfoDetailsBtn>
 }

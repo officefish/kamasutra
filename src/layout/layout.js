@@ -138,3 +138,8 @@ export {StyledDetailsSectionSpacer}  from './profile/info/details/styledDetailsS
 export {StyledEditDetailsSectionBtn} from './profile/info/details/styledEditDetailsSectionBtn'
 export {StyledEditDetailsSectionNavLink} from './profile/info/details/styledEditDetailsSectionNavLink'
 export {StyledIntroItemSpan} from './profile/info/details/styledIntroItemSpan'
+
+/** Profile Statistics Section */
+export {StyledStatisticsSection} from './profile/stats/styledStatisticsSection'
+export {StyledStatisticsNavLink} from './profile/stats/styledStatisticsNavLink'
+export {StyledStatisticsNumsLabel} from './profile/stats/styledStatisticsNumsLabel'

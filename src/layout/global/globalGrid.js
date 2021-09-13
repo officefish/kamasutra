@@ -1,8 +1,4 @@
 import tw from 'tailwind-styled-components'
-import styled from 'styled-components'
-import { css } from 'styled-components';
-
-//import {GlobalContainer, GlobalDisplay} from "../layout";
 
 const GlobalContainer = tw`
     container

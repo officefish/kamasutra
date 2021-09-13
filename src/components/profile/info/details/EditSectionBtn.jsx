@@ -5,12 +5,8 @@ import {StyledEditDetailsSectionBtn} from "../../../../layout/profile/info/detai
 
 @dropdownComponent
 class EditSectionBtn extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render () {
-        //debugger
         return <StyledEditDetailsSectionBtn >
             <StyledEditDetailsSectionNavLink to={this.props.navLink}>Корректировать</StyledEditDetailsSectionNavLink>
         </StyledEditDetailsSectionBtn>

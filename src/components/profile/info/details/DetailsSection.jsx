@@ -26,16 +26,16 @@ class DetailsSection extends React.Component {
                 return <InfoItem {...itemProps}/>
             }  )
 
-        this.handleOnMouseOver = this.handleOnMouseOver.bind(this);
+        this.handleOnMouseEnter = this.handleOnMouseEnter.bind(this);
         this.handleOnMouseLeave = this.handleOnMouseLeave.bind(this);
     }
 
-    handleOnMouseOver () {
+    handleOnMouseEnter () {
         const {toggleDropdown, dropdownKey} = this.props
         toggleDropdown && dropdownKey && toggleDropdown(true, dropdownKey)
     }
 
-    handleOnMouseLeave (event) {
+    handleOnMouseLeave () {
         const {toggleDropdown, dropdownKey} = this.props
         toggleDropdown && dropdownKey && toggleDropdown(false, dropdownKey)
     }
@@ -47,7 +47,7 @@ class DetailsSection extends React.Component {
     render () {
         const {title, navLink, isDropdown} = this.props
         return <StyledDetailsSection
-        onMouseOver={this.handleOnMouseOver}
+        onMouseEnter={this.handleOnMouseEnter}
         onMouseLeave={this.handleOnMouseLeave}
         >
             <StyledDetailsSectionLiner>

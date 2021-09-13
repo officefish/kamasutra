@@ -1,4 +1,4 @@
-import {StyledNameItemLabel, StyledNameItemLiner, StyledOnlineStatusLabel} from "../../../../layout/layout";
+import {StyledNameItemLabel, StyledNameItemLiner, StyledOnlineStatusLabel} from "../../../../../layout/layout";
 
 const NameItem = props => {
     return <StyledNameItemLiner>
