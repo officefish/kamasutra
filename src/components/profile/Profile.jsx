@@ -7,7 +7,7 @@ import FriendsSection from "./friends/FriendsSection";
 import MusicSection from "./music/MusicSection";
 import InfoSection from "./info/InfoSection";
 import PhotoSection from "./photo/PhotoSection";
-import PublishSection from "./publish/PublishSection";
+import UserPostsSection from "./publish/UserPostsSection";
 
 @setTitle((props) => {
     if(!props.user) return 'Loading profile...'
@@ -24,7 +24,7 @@ class Profile extends React.Component {
             <RightColumn>
                 <InfoSection />
                 <PhotoSection />
-                <PublishSection />
+                <UserPostsSection />
             </RightColumn>
         </>
     }
