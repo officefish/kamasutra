@@ -147,3 +147,10 @@ export {StyledIntroItemSpan} from './profile/info/details/styledIntroItemSpan'
 export {StyledStatisticsSection} from './profile/stats/styledStatisticsSection'
 export {StyledStatisticsNavLink} from './profile/stats/styledStatisticsNavLink'
 export {StyledStatisticsNumsLabel} from './profile/stats/styledStatisticsNumsLabel'
+
+/** Profile Photo Section */
+export {StyledPhotoSectionGreedBase} from './profile/photos/styledPhotoSectionGreedBase'
+export {StyledPhotoSectionGreed} from './profile/photos/styledPhotoSectionGreed'
+export {StyledPhotoSectionImg} from './profile/photos/styledPhotoSectionImg'
+export {StyledPhotoSectionImgLiner} from './profile/photos/styledPhotoSectionImgLiner'
+export {StyledPhotoSectionImgNavLink} from './profile/photos/styledPhotoSectionImgNavLink'
