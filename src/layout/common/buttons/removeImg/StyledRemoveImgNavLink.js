@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import tw from 'tailwind-styled-components'
 
-/** Div which setup header items bar */
-export const StyledRemoveAvatarBtn = tw.button`
+export const StyledRemoveImgNavLink = tw(Link)`
     flex 
     items-center 
     justify-center 

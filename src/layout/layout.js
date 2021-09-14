@@ -1,4 +1,3 @@
-
 /** Global blocks */
 export {GlobalStyle} from "./global/globalStyle"
 export {GlobalHeader} from "./global/globalHeader"
@@ -12,6 +11,11 @@ export {LeftColumn} from './global/columns/leftColumn'
 export {CenterColumn} from './global/columns/centerColumn'
 export {RightColumn} from './global/columns/rightColumn'
 export {StyledColumnSectionLiner} from './global/columns/styledColumnSectionLiner'
+
+/** Common components */
+export {RemoveImgBtnLiner} from './common/buttons/removeImg/removeImgBtnLiner'
+export {StyledRemoveImgNavLink} from './common/buttons/removeImg/StyledRemoveImgNavLink'
+export {RemoveImgSVG} from './common/buttons/removeImg/RemoveImgSVG'
 
 /** Header */
 export {FixedWidthHeaderContainer} from "./header/headerContainer"
@@ -86,9 +90,6 @@ export {MemoriesItemSVG} from './profile/avatar/list/MemoriesItemSVG'
 export {MoneyTransfersSVG} from './profile/avatar/list/MoneyTransfersSVG'
 
 /** Edit Profile Avatar */
-export {RemoveAvatarButtonLiner} from './profile/avatar/edit/removeAvatarButtonLiner'
-export {StyledRemoveAvatarBtn} from './profile/avatar/edit/styledRemoveAvatarBtn'
-export {RemoveAvatarSVG} from './profile/avatar/edit/RemoveAvatarSVG'
 export {EditAvatarListLiner} from './profile/avatar/edit/editAvatarListLiner'
 export {StyledAvatarEditList} from './profile/avatar/edit/styledAvatarEditList'
 export {AvatarEditListItemLiner} from './profile/avatar/edit/avatarEditListItemLiner'
