@@ -13,9 +13,12 @@ export {RightColumn} from './global/columns/rightColumn'
 export {StyledColumnSectionLiner} from './global/columns/styledColumnSectionLiner'
 
 /** Common components */
-export {RemoveImgBtnLiner} from './common/buttons/removeImg/removeImgBtnLiner'
-export {StyledRemoveImgNavLink} from './common/buttons/removeImg/StyledRemoveImgNavLink'
-export {RemoveImgSVG} from './common/buttons/removeImg/RemoveImgSVG'
+export {RemoveImgBtnLiner} from './common/button/removeImg/removeImgBtnLiner'
+export {StyledRemoveImgNavLink} from './common/button/removeImg/StyledRemoveImgNavLink'
+export {RemoveImgSVG} from './common/button/removeImg/RemoveImgSVG'
+export {StyledSectionTitleLiner} from './common/section/styledSectionTitleLiner'
+export {StyledSectionTitleNavLink} from './common/section/styledSectionTitleNavLink'
+export {StyledSectionTitleNumsSpan} from './common/section/styledSectionTitleNumsSpan'
 
 /** Header */
 export {FixedWidthHeaderContainer} from "./header/headerContainer"

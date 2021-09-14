@@ -1,12 +1,9 @@
 import {StyledRightColumnSection} from "../../../layout/layout";
+import SectionNumsTitle from "../../ui/section/title/SectionNumTitle";
 
 const PhotoSection = () =>
     <StyledRightColumnSection>
-        <div className='flex justify-between items-center'>
-            <a href="/profile" className='flex-1 pl-3 pt-3 text-gray-900 hover:text-blue-700'>
-                Мои фотографии:<span className='text-gray-400 ml-1'>23</span>
-            </a>
-        </div>
+        <SectionNumsTitle title='Мои фотографии' numsValue={23} navLink='/profile'/>
         <div className='p-3'>
             <div className='grid grid-cols-4 gap-2'>
                 <div className='relative pt-full'>
