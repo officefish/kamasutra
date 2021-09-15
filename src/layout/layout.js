@@ -20,6 +20,19 @@ export {StyledSectionTitleLiner} from './common/section/styledSectionTitleLiner'
 export {StyledSectionTitleNavLink} from './common/section/styledSectionTitleNavLink'
 export {StyledSectionTitleNumsSpan} from './common/section/styledSectionTitleNumsSpan'
 
+/** Flex classes */
+export {
+    DivFlx,
+    DivFlxItmCnt,
+    DivFlxJstBtw,
+    DivFlxItmCntJstBtw,
+    BtnFlx,
+    BtnFlxItmCnt,
+    BtnFlxJstBtw,
+    BtnFlxItmCntJstBtw
+} from './flex/flx'
+
+
 /** Header */
 export {FixedWidthHeaderContainer} from "./header/headerContainer"
 export {HeaderBar} from "./header/headerBar"
@@ -154,3 +167,12 @@ export {StyledPhotoSectionGreed} from './profile/photos/styledPhotoSectionGreed'
 export {StyledPhotoSectionImg} from './profile/photos/styledPhotoSectionImg'
 export {StyledPhotoSectionImgLiner} from './profile/photos/styledPhotoSectionImgLiner'
 export {StyledPhotoSectionImgNavLink} from './profile/photos/styledPhotoSectionImgNavLink'
+
+/** Post Section */
+export {StyledPostFooterLiner} from './common/post/footer/styledPostFooterLiner'
+export {StyledPostFooterBtn} from './common/post/footer/styledPostFooterBtn'
+export {StyledPostFooterRightSideBar} from './common/post/footer/styledPostFooterRightSideBar'
+export {LikeSVG} from './common/svg/LikeSVG'
+export {CommentSVG} from './common/svg/CommentSVG'
+export {RepostSVG} from './common/svg/RepostSVG'
+export {ViewsSVG} from './common/svg/ViewsSVG'

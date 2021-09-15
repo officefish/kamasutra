@@ -28,7 +28,7 @@ class OtherItemDropdown extends React.Component {
                     <NavLink to='#' >Защита данных</NavLink>
                 </StyledAdvancedDropdownListItem>
             </StyledAdvancedDropdownList>
-            <StyledCornerDetail />
+            {/*<StyledCornerDetail />*/}
         </StyledAdvancedDropdownLiner>
     }
 }
