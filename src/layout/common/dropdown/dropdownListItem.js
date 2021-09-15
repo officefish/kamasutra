@@ -1,6 +1,6 @@
 import tw from 'tailwind-styled-components'
 
-export const StyledAdvancedDropdownListItem = tw.li`
+export const DropdownListItem = tw.li`
     flex 
     cursor-pointer 
     items-center 

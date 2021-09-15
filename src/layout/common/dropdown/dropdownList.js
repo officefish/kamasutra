@@ -1,12 +1,12 @@
 import tw from 'tailwind-styled-components'
 
-export const StyledAdvancedDropdownList = tw.ul`
+export const DropdownList = tw.ul`
     bg-white
     py-1 
     rounded 
     shadow-sm 
     whitespace-no-wrap 
-    w-44
+    w-full
     border
     border-gray-300
     `

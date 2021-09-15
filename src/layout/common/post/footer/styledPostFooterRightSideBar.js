@@ -1,5 +1,5 @@
 import tw from "tailwind-styled-components";
-import {DivFlxItmCnt} from "../../../flex/flx";
+import {DivFlxItmCnt} from "../../position/flex/flx";
 
 export const StyledPostFooterRightSideBar  = tw(DivFlxItmCnt)`
     text-base 

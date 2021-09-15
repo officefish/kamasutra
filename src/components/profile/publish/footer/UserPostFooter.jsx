@@ -1,5 +1,4 @@
 import {
-    DivFlxItmCnt,
     StyledPostFooterLiner
 } from "../../../../layout/layout";
 

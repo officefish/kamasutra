@@ -2,8 +2,8 @@ import React from "react";
 import {NavLink} from "react-router-dom";
 import {
     StyledAdvancedDropdownLiner,
-    StyledAdvancedDropdownList,
-    StyledAdvancedDropdownListItem, StyledCornerDetail
+    DropdownList,
+    DropdownListItem
 } from "../../../../../layout/layout";
 import {dropdownComponentWithOutsideHandler} from "../../../../../decorators/@withDropdown";
 
@@ -14,21 +14,20 @@ const dropdownRootRef = React.createRef()
 class OtherItemDropdown extends React.Component {
     render () {
         return  <StyledAdvancedDropdownLiner ref={dropdownRootRef}>
-            <StyledAdvancedDropdownList>
-                <StyledAdvancedDropdownListItem>
+            <DropdownList>
+                <DropdownListItem>
                     <NavLink to='#'>О вконтакте</NavLink>
-                </StyledAdvancedDropdownListItem>
-                <StyledAdvancedDropdownListItem>
+                </DropdownListItem>
+                <DropdownListItem>
                     <NavLink to='#' >Вакансии</NavLink>
-                </StyledAdvancedDropdownListItem>
-                <StyledAdvancedDropdownListItem>
+                </DropdownListItem>
+                <DropdownListItem>
                     <NavLink to='#' >Правовая информация</NavLink>
-                </StyledAdvancedDropdownListItem>
-                <StyledAdvancedDropdownListItem>
+                </DropdownListItem>
+                <DropdownListItem>
                     <NavLink to='#' >Защита данных</NavLink>
-                </StyledAdvancedDropdownListItem>
-            </StyledAdvancedDropdownList>
-            {/*<StyledCornerDetail />*/}
+                </DropdownListItem>
+            </DropdownList>
         </StyledAdvancedDropdownLiner>
     }
 }

@@ -12,6 +12,11 @@ export const DivFlxJstBtw = tw(DivFlx)`
 export const DivFlxItmCntJstBtw = tw(DivFlxItmCnt)`
    justify-between 
     `
+export const DivFlxShr0 = tw(DivFlx)`
+    flex-shrink-0
+    `
+
+
 export const BtnFlx = tw.button`
    flex 
    `
@@ -24,3 +29,4 @@ export const BtnFlxJstBtw = tw(BtnFlx)`
 export const BtnFlxItmCntJstBtw = tw(BtnFlxItmCnt)`
    justify-between 
     `
+
